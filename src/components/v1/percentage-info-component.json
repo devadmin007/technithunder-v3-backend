@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_v1_percentage_info_components",
+  "info": {
+    "displayName": "percentageInfoComponent"
+  },
+  "options": {},
+  "attributes": {
+    "percentage": {
+      "type": "integer"
+    },
+    "info": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_v1_our_approach_tag_components",
+  "info": {
+    "displayName": "ourApproachTagComponent"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

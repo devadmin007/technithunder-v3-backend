@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_v1_key_features_list_components",
+  "info": {
+    "displayName": "keyFeaturesListComponent"
+  },
+  "options": {},
+  "attributes": {
+    "list": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

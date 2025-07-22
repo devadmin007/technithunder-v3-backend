@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_v1_about_title_info_logo_components",
+  "info": {
+    "displayName": "aboutTitleInfoLogoComponent"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "info": {
+      "type": "string"
+    },
+    "logoImage": {
+      "type": "component",
+      "component": "v1.logo",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,130 @@
+import type { Schema, Struct } from '@strapi/strapi';
+
+export interface V1AboutTitleInfoLogoComponent extends Struct.ComponentSchema {
+  collectionName: 'components_v1_about_title_info_logo_components';
+  info: {
+    displayName: 'aboutTitleInfoLogoComponent';
+  };
+  attributes: {
+    info: Schema.Attribute.String;
+    logoImage: Schema.Attribute.Component<'v1.logo', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface V1CasestudyContent extends Struct.ComponentSchema {
+  collectionName: 'components_v1_casestudy_contents';
+  info: {
+    displayName: 'casestudyContent';
+  };
+  attributes: {
+    aboutDescription: Schema.Attribute.Text;
+    aboutTitleInfoLogo: Schema.Attribute.Component<
+      'v1.about-title-info-logo-component',
+      true
+    >;
+    challangesDescription: Schema.Attribute.Text;
+    heroImg: Schema.Attribute.Media<'images' | 'files'>;
+    heroTitle: Schema.Attribute.Text;
+    keyFeaturesImg: Schema.Attribute.Media<'images' | 'files'>;
+    keyFeaturesList: Schema.Attribute.Component<
+      'v1.key-features-list-component',
+      true
+    >;
+    letsBuildDescription: Schema.Attribute.Text;
+    letsBuildImg: Schema.Attribute.Media<'images' | 'files'>;
+    letsBuildTitle: Schema.Attribute.String;
+    ourApproachDescription: Schema.Attribute.Text;
+    ourApproachTag: Schema.Attribute.Component<
+      'v1.our-approach-tag-component',
+      true
+    >;
+    percentageInfo: Schema.Attribute.Component<
+      'v1.percentage-info-component',
+      true
+    >;
+    projectImg1: Schema.Attribute.Media<'images' | 'files'>;
+    projectImg2: Schema.Attribute.Media<'images' | 'files'>;
+    projectResultDescription: Schema.Attribute.Text;
+    solutionDescription: Schema.Attribute.Component<
+      'v1.solution-description-component',
+      true
+    >;
+  };
+}
+
+export interface V1KeyFeaturesListComponent extends Struct.ComponentSchema {
+  collectionName: 'components_v1_key_features_list_components';
+  info: {
+    displayName: 'keyFeaturesListComponent';
+  };
+  attributes: {
+    list: Schema.Attribute.String;
+  };
+}
+
+export interface V1Logo extends Struct.ComponentSchema {
+  collectionName: 'components_v1_logos';
+  info: {
+    displayName: 'logo';
+  };
+  attributes: {
+    logoImg: Schema.Attribute.Media<'images' | 'files'>;
+  };
+}
+
+export interface V1OurApproachTagComponent extends Struct.ComponentSchema {
+  collectionName: 'components_v1_our_approach_tag_components';
+  info: {
+    displayName: 'ourApproachTagComponent';
+  };
+  attributes: {
+    tag: Schema.Attribute.String;
+  };
+}
+
+export interface V1PercentageInfoComponent extends Struct.ComponentSchema {
+  collectionName: 'components_v1_percentage_info_components';
+  info: {
+    displayName: 'percentageInfoComponent';
+  };
+  attributes: {
+    info: Schema.Attribute.String;
+    percentage: Schema.Attribute.Integer;
+  };
+}
+
+export interface V1Skills extends Struct.ComponentSchema {
+  collectionName: 'components_v1_skills';
+  info: {
+    displayName: 'skills';
+  };
+  attributes: {
+    skillsItem: Schema.Attribute.String;
+  };
+}
+
+export interface V1SolutionDescriptionComponent extends Struct.ComponentSchema {
+  collectionName: 'components_v1_solution_description_components';
+  info: {
+    displayName: 'solutionDescriptionComponent';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+  };
+}
+
+declare module '@strapi/strapi' {
+  export module Public {
+    export interface ComponentSchemas {
+      'v1.about-title-info-logo-component': V1AboutTitleInfoLogoComponent;
+      'v1.casestudy-content': V1CasestudyContent;
+      'v1.key-features-list-component': V1KeyFeaturesListComponent;
+      'v1.logo': V1Logo;
+      'v1.our-approach-tag-component': V1OurApproachTagComponent;
+      'v1.percentage-info-component': V1PercentageInfoComponent;
+      'v1.skills': V1Skills;
+      'v1.solution-description-component': V1SolutionDescriptionComponent;
+    }
+  }
+}
