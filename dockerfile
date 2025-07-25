@@ -12,7 +12,8 @@ RUN npm install --production
 COPY . .
 
 # Build the Strapi admin panel
-RUN npm run build
+ENV NODE_ENV=production
+RUN npm install --omit=dev
 
 # Expose port and start the app
 EXPOSE 1337
