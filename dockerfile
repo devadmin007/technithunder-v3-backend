@@ -1,21 +1,23 @@
-# Dockerfile
-FROM node:18-alpine
+# Use official Node.js 20.11 Alpine image
+FROM node:20.11-alpine
 
-# Create app directory
-WORKDIR /app
+# Set working directory
+WORKDIR /srv/app
 
-ENV NODE_ENV=production
+# Copy package.json and package-lock.json if present
+COPY package.json package-lock.json* ./
 
-# Install app dependencies
-COPY package*.json ./
+# Install dependencies with npm
 RUN npm install
 
-# Copy the rest of the project
+# Copy the rest of the application code
 COPY . .
 
-# Build the Strapi admin panel
-RUN npm install
+# Build the Strapi admin UI
+RUN npm run build
 
-# Expose port and start the app
+# Expose Strapi default port
 EXPOSE 1337
+
+# Start the Strapi server
 CMD ["npm", "start"]
