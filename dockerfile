@@ -4,16 +4,17 @@ FROM node:18-alpine
 # Create app directory
 WORKDIR /app
 
+ENV NODE_ENV=production
+
 # Install app dependencies
 COPY package*.json ./
-RUN npm install --production
+RUN npm install
 
 # Copy the rest of the project
 COPY . .
 
 # Build the Strapi admin panel
-ENV NODE_ENV=production
-RUN npm install --omit=dev
+RUN npm install
 
 # Expose port and start the app
 EXPOSE 1337
