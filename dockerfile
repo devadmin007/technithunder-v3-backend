@@ -8,6 +8,12 @@ WORKDIR /srv/app
 COPY package.json package-lock.json* ./
 
 # Install dependencies with npm
+# Add these lines before npm install
+RUN npm config set registry https://registry.npmjs.org/
+RUN npm config set strict-ssl false
+RUN npm config set fetch-timeout 600000
+RUN npm config set fetch-retry-mintimeout 10000
+RUN npm config set fetch-retry-maxtimeout 60000
 RUN npm install
 
 # Copy the rest of the application code
