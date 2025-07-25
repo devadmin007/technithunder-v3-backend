@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_v1_text_components",
+  "info": {
+    "displayName": "textComponent"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

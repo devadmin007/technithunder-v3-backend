@@ -114,6 +114,16 @@ export interface V1SolutionDescriptionComponent extends Struct.ComponentSchema {
   };
 }
 
+export interface V1TextComponent extends Struct.ComponentSchema {
+  collectionName: 'components_v1_text_components';
+  info: {
+    displayName: 'textComponent';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -125,6 +135,7 @@ declare module '@strapi/strapi' {
       'v1.percentage-info-component': V1PercentageInfoComponent;
       'v1.skills': V1Skills;
       'v1.solution-description-component': V1SolutionDescriptionComponent;
+      'v1.text-component': V1TextComponent;
     }
   }
 }
