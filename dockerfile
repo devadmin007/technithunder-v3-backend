@@ -1,14 +1,13 @@
 # Use official Node.js 20.11 Alpine image
-FROM node:20.11-alpine
+FROM node:latest
 
 # Set working directory
 WORKDIR /app
 
 # Copy package.json and package-lock.json if present
-COPY package.json package-lock.json* ./
+COPY package.json ./
 
 # Install dependencies with npm
-# Add these lines before npm install
 RUN npm install
 
 # Copy the rest of the application code
