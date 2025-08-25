@@ -94,6 +94,17 @@ export interface V1PercentageInfoComponent extends Struct.ComponentSchema {
   };
 }
 
+export interface V1QueAnsComponent extends Struct.ComponentSchema {
+  collectionName: 'components_v1_que_ans_components';
+  info: {
+    displayName: 'queAnsComponent';
+  };
+  attributes: {
+    answer: Schema.Attribute.String;
+    question: Schema.Attribute.String;
+  };
+}
+
 export interface V1Skills extends Struct.ComponentSchema {
   collectionName: 'components_v1_skills';
   info: {
@@ -124,6 +135,17 @@ export interface V1TextComponent extends Struct.ComponentSchema {
   };
 }
 
+export interface V1TitleDescriptionComponent extends Struct.ComponentSchema {
+  collectionName: 'components_v1_title_description_components';
+  info: {
+    displayName: 'titleDescriptionComponent';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText;
+    title: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -133,9 +155,11 @@ declare module '@strapi/strapi' {
       'v1.logo': V1Logo;
       'v1.our-approach-tag-component': V1OurApproachTagComponent;
       'v1.percentage-info-component': V1PercentageInfoComponent;
+      'v1.que-ans-component': V1QueAnsComponent;
       'v1.skills': V1Skills;
       'v1.solution-description-component': V1SolutionDescriptionComponent;
       'v1.text-component': V1TextComponent;
+      'v1.title-description-component': V1TitleDescriptionComponent;
     }
   }
 }
