@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "E-commerce",
+        "Mobile",
+        "Startup",
+        "Digital Transformation",
+        "Dedicated Developers"
+      ]
+    },
+    "serviceName": {
+      "type": "component",
+      "component": "v1.text-component",
+      "repeatable": true
+    }
+  }
+}
