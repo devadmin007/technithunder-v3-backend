@@ -436,7 +436,11 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    serviceDetail: Schema.Attribute.DynamicZone<
+      ['v1.title-description-component', 'v1.que-ans-component']
+    >;
     serviceName: Schema.Attribute.Component<'v1.text-component', true>;
+    slug: Schema.Attribute.UID;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

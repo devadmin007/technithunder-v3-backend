@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_v1_title_description_components",
+  "info": {
+    "displayName": "titleDescriptionComponent"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

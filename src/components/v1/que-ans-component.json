@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_v1_que_ans_components",
+  "info": {
+    "displayName": "queAnsComponent"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

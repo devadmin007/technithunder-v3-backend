@@ -25,6 +25,16 @@
       "type": "component",
       "component": "v1.text-component",
       "repeatable": true
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "serviceDetail": {
+      "type": "dynamiczone",
+      "components": [
+        "v1.title-description-component",
+        "v1.que-ans-component"
+      ]
     }
   }
 }
