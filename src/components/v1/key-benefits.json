@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_v1_key_benefits",
+  "info": {
+    "displayName": "keyBenefits"
+  },
+  "options": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string"
+    },
+    "mainDescription": {
+      "type": "text"
+    },
+    "headingDescription": {
+      "type": "component",
+      "component": "v1.title-description-component",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

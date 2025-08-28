@@ -53,6 +53,32 @@ export interface V1CasestudyContent extends Struct.ComponentSchema {
   };
 }
 
+export interface V1HeadingAndBulletedRichText extends Struct.ComponentSchema {
+  collectionName: 'components_v1_heading_and_bulleted_rich_texts';
+  info: {
+    displayName: 'heading&bulletedRichText';
+  };
+  attributes: {
+    bulletedListRichText: Schema.Attribute.RichText;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface V1KeyBenefits extends Struct.ComponentSchema {
+  collectionName: 'components_v1_key_benefits';
+  info: {
+    displayName: 'keyBenefits';
+  };
+  attributes: {
+    headingDescription: Schema.Attribute.Component<
+      'v1.title-description-component',
+      true
+    >;
+    mainDescription: Schema.Attribute.Text;
+    mainTitle: Schema.Attribute.String;
+  };
+}
+
 export interface V1KeyFeaturesListComponent extends Struct.ComponentSchema {
   collectionName: 'components_v1_key_features_list_components';
   info: {
@@ -105,6 +131,36 @@ export interface V1QueAnsComponent extends Struct.ComponentSchema {
   };
 }
 
+export interface V1ServicePartnerComponent extends Struct.ComponentSchema {
+  collectionName: 'components_v1_service_partner_components';
+  info: {
+    displayName: 'servicePartnerComponent';
+  };
+  attributes: {
+    headingDescription: Schema.Attribute.Component<
+      'v1.title-description-component',
+      true
+    >;
+    mainDescription: Schema.Attribute.Text;
+    mainTitle: Schema.Attribute.String;
+  };
+}
+
+export interface V1ServicesInfoComponent extends Struct.ComponentSchema {
+  collectionName: 'components_v1_services_info_components';
+  info: {
+    displayName: 'servicesInfoComponent';
+  };
+  attributes: {
+    headingBulletedList: Schema.Attribute.Component<
+      'v1.heading-and-bulleted-rich-text',
+      true
+    >;
+    mainDescription: Schema.Attribute.Text;
+    mainTitle: Schema.Attribute.String;
+  };
+}
+
 export interface V1Skills extends Struct.ComponentSchema {
   collectionName: 'components_v1_skills';
   info: {
@@ -146,20 +202,40 @@ export interface V1TitleDescriptionComponent extends Struct.ComponentSchema {
   };
 }
 
+export interface V1WhyChooseUsComponent extends Struct.ComponentSchema {
+  collectionName: 'components_v1_why_choose_us_components';
+  info: {
+    displayName: 'whyChooseUsComponent';
+  };
+  attributes: {
+    headingDescription: Schema.Attribute.Component<
+      'v1.title-description-component',
+      true
+    >;
+    mainDescription: Schema.Attribute.Text;
+    mainTitle: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'v1.about-title-info-logo-component': V1AboutTitleInfoLogoComponent;
       'v1.casestudy-content': V1CasestudyContent;
+      'v1.heading-and-bulleted-rich-text': V1HeadingAndBulletedRichText;
+      'v1.key-benefits': V1KeyBenefits;
       'v1.key-features-list-component': V1KeyFeaturesListComponent;
       'v1.logo': V1Logo;
       'v1.our-approach-tag-component': V1OurApproachTagComponent;
       'v1.percentage-info-component': V1PercentageInfoComponent;
       'v1.que-ans-component': V1QueAnsComponent;
+      'v1.service-partner-component': V1ServicePartnerComponent;
+      'v1.services-info-component': V1ServicesInfoComponent;
       'v1.skills': V1Skills;
       'v1.solution-description-component': V1SolutionDescriptionComponent;
       'v1.text-component': V1TextComponent;
       'v1.title-description-component': V1TitleDescriptionComponent;
+      'v1.why-choose-us-component': V1WhyChooseUsComponent;
     }
   }
 }

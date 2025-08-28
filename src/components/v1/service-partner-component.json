@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_v1_service_partner_components",
+  "info": {
+    "displayName": "servicePartnerComponent"
+  },
+  "options": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string"
+    },
+    "mainDescription": {
+      "type": "text"
+    },
+    "headingDescription": {
+      "type": "component",
+      "component": "v1.title-description-component",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

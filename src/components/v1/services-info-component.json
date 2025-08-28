@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_v1_services_info_components",
+  "info": {
+    "displayName": "servicesInfoComponent"
+  },
+  "options": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string"
+    },
+    "mainDescription": {
+      "type": "text"
+    },
+    "headingBulletedList": {
+      "type": "component",
+      "component": "v1.heading-and-bulleted-rich-text",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

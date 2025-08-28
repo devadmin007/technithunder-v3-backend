@@ -22,19 +22,38 @@
       ]
     },
     "serviceName": {
-      "type": "component",
-      "component": "v1.text-component",
-      "repeatable": true
+      "type": "string"
     },
     "slug": {
       "type": "uid"
     },
-    "serviceDetail": {
-      "type": "dynamiczone",
-      "components": [
-        "v1.title-description-component",
-        "v1.que-ans-component"
-      ]
+    "heroTitle": {
+      "type": "string"
+    },
+    "whyChooseUs": {
+      "type": "component",
+      "component": "v1.why-choose-us-component",
+      "repeatable": false
+    },
+    "keyBenefits": {
+      "type": "component",
+      "component": "v1.key-benefits",
+      "repeatable": false
+    },
+    "servicesInfo": {
+      "type": "component",
+      "component": "v1.services-info-component",
+      "repeatable": false
+    },
+    "servicePartner": {
+      "type": "component",
+      "component": "v1.service-partner-component",
+      "repeatable": false
+    },
+    "faqs": {
+      "type": "component",
+      "component": "v1.que-ans-component",
+      "repeatable": true
     }
   }
 }

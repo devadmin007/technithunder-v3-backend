@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_v1_why_choose_us_components",
+  "info": {
+    "displayName": "whyChooseUsComponent"
+  },
+  "options": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string"
+    },
+    "mainDescription": {
+      "type": "text"
+    },
+    "headingDescription": {
+      "type": "component",
+      "component": "v1.title-description-component",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

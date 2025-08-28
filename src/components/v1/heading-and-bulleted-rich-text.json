@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_v1_heading_and_bulleted_rich_texts",
+  "info": {
+    "displayName": "heading&bulletedRichText"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "bulletedListRichText": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}
