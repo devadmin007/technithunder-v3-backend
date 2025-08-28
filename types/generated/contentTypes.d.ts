@@ -430,6 +430,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     faqs: Schema.Attribute.Component<'v1.que-ans-component', true>;
+    heroImage: Schema.Attribute.Media<'images' | 'files'>;
     heroTitle: Schema.Attribute.String;
     keyBenefits: Schema.Attribute.Component<'v1.key-benefits', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -439,6 +440,10 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    segmentsWeServe: Schema.Attribute.Component<
+      'v1.segments-we-serve-component',
+      false
+    >;
     serviceName: Schema.Attribute.String;
     servicePartner: Schema.Attribute.Component<
       'v1.service-partner-component',

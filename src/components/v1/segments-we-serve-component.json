@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_v1_segments_we_serve_components",
+  "info": {
+    "displayName": "segmentsWeServeComponent"
+  },
+  "options": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string"
+    },
+    "mainDescription": {
+      "type": "text"
+    },
+    "headingDescriptionImage": {
+      "type": "component",
+      "component": "v1.heding-description-image",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -64,6 +64,18 @@ export interface V1HeadingAndBulletedRichText extends Struct.ComponentSchema {
   };
 }
 
+export interface V1HedingDescriptionImage extends Struct.ComponentSchema {
+  collectionName: 'components_v1_heding_description_images';
+  info: {
+    displayName: 'hedingDescriptionImage';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+  };
+}
+
 export interface V1KeyBenefits extends Struct.ComponentSchema {
   collectionName: 'components_v1_key_benefits';
   info: {
@@ -126,8 +138,23 @@ export interface V1QueAnsComponent extends Struct.ComponentSchema {
     displayName: 'queAnsComponent';
   };
   attributes: {
-    answer: Schema.Attribute.String;
+    answer: Schema.Attribute.Text;
     question: Schema.Attribute.String;
+  };
+}
+
+export interface V1SegmentsWeServeComponent extends Struct.ComponentSchema {
+  collectionName: 'components_v1_segments_we_serve_components';
+  info: {
+    displayName: 'segmentsWeServeComponent';
+  };
+  attributes: {
+    headingDescriptionImage: Schema.Attribute.Component<
+      'v1.heding-description-image',
+      true
+    >;
+    mainDescription: Schema.Attribute.Text;
+    mainTitle: Schema.Attribute.String;
   };
 }
 
@@ -223,12 +250,14 @@ declare module '@strapi/strapi' {
       'v1.about-title-info-logo-component': V1AboutTitleInfoLogoComponent;
       'v1.casestudy-content': V1CasestudyContent;
       'v1.heading-and-bulleted-rich-text': V1HeadingAndBulletedRichText;
+      'v1.heding-description-image': V1HedingDescriptionImage;
       'v1.key-benefits': V1KeyBenefits;
       'v1.key-features-list-component': V1KeyFeaturesListComponent;
       'v1.logo': V1Logo;
       'v1.our-approach-tag-component': V1OurApproachTagComponent;
       'v1.percentage-info-component': V1PercentageInfoComponent;
       'v1.que-ans-component': V1QueAnsComponent;
+      'v1.segments-we-serve-component': V1SegmentsWeServeComponent;
       'v1.service-partner-component': V1ServicePartnerComponent;
       'v1.services-info-component': V1ServicesInfoComponent;
       'v1.skills': V1Skills;
