@@ -34,8 +34,8 @@
       "type": "media",
       "multiple": false,
       "allowedTypes": [
-        "images",
-        "files"
+        "image",
+        "file"
       ]
     },
     "whyChooseUs": {
