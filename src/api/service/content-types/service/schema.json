@@ -30,6 +30,14 @@
     "heroTitle": {
       "type": "string"
     },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
     "whyChooseUs": {
       "type": "component",
       "component": "v1.why-choose-us-component",
@@ -38,6 +46,11 @@
     "keyBenefits": {
       "type": "component",
       "component": "v1.key-benefits",
+      "repeatable": false
+    },
+    "segmentsWeServe": {
+      "type": "component",
+      "component": "v1.segments-we-serve-component",
       "repeatable": false
     },
     "servicesInfo": {
