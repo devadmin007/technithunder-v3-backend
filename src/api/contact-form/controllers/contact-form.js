@@ -20,7 +20,7 @@ module.exports = createCoreController('api::contact-form.contact-form', ({ strap
         subject: '📩 New Contact Form Submission',
         text: `New form submitted:\n
         Name: ${data.name}
-        Email: ${data.bussinessEmail}
+        Email: ${data.businessEmail}
         CountryCode: ${data.countryCode}
         Phone: ${data.phoneNumber}
         Project: ${data.projectDescription}`,
@@ -28,7 +28,7 @@ module.exports = createCoreController('api::contact-form.contact-form', ({ strap
 
       // 3. Send confirmation email to User
       await strapi.plugin('email').service('email').send({
-        to: data.bussinessEmail,
+        to: data.businessEmail,
         from: process.env.SMTP_USERNAME,
         subject: '✅ Thanks for contacting us!',
         text: `Hello ${data.name},\n\nThank you for reaching out! We’ve received your request and will contact you soon.\n\n— Team`,
