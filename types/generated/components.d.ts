@@ -76,6 +76,16 @@ export interface V1HedingDescriptionImage extends Struct.ComponentSchema {
   };
 }
 
+export interface V1Image extends Struct.ComponentSchema {
+  collectionName: 'components_v1_images';
+  info: {
+    displayName: 'image';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files'>;
+  };
+}
+
 export interface V1KeyBenefits extends Struct.ComponentSchema {
   collectionName: 'components_v1_key_benefits';
   info: {
@@ -140,6 +150,16 @@ export interface V1QueAnsComponent extends Struct.ComponentSchema {
   attributes: {
     answer: Schema.Attribute.Text;
     question: Schema.Attribute.String;
+  };
+}
+
+export interface V1RichText extends Struct.ComponentSchema {
+  collectionName: 'components_v1_rich_texts';
+  info: {
+    displayName: 'richText';
+  };
+  attributes: {
+    richText: Schema.Attribute.Blocks;
   };
 }
 
@@ -208,6 +228,16 @@ export interface V1SolutionDescriptionComponent extends Struct.ComponentSchema {
   };
 }
 
+export interface V1Tags extends Struct.ComponentSchema {
+  collectionName: 'components_v1_tags';
+  info: {
+    displayName: 'tags';
+  };
+  attributes: {
+    tag: Schema.Attribute.String;
+  };
+}
+
 export interface V1TextComponent extends Struct.ComponentSchema {
   collectionName: 'components_v1_text_components';
   info: {
@@ -251,17 +281,20 @@ declare module '@strapi/strapi' {
       'v1.casestudy-content': V1CasestudyContent;
       'v1.heading-and-bulleted-rich-text': V1HeadingAndBulletedRichText;
       'v1.heding-description-image': V1HedingDescriptionImage;
+      'v1.image': V1Image;
       'v1.key-benefits': V1KeyBenefits;
       'v1.key-features-list-component': V1KeyFeaturesListComponent;
       'v1.logo': V1Logo;
       'v1.our-approach-tag-component': V1OurApproachTagComponent;
       'v1.percentage-info-component': V1PercentageInfoComponent;
       'v1.que-ans-component': V1QueAnsComponent;
+      'v1.rich-text': V1RichText;
       'v1.segments-we-serve-component': V1SegmentsWeServeComponent;
       'v1.service-partner-component': V1ServicePartnerComponent;
       'v1.services-info-component': V1ServicesInfoComponent;
       'v1.skills': V1Skills;
       'v1.solution-description-component': V1SolutionDescriptionComponent;
+      'v1.tags': V1Tags;
       'v1.text-component': V1TextComponent;
       'v1.title-description-component': V1TitleDescriptionComponent;
       'v1.why-choose-us-component': V1WhyChooseUsComponent;
