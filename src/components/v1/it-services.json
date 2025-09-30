@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_v1_it_services",
+  "info": {
+    "displayName": "ItServices"
+  },
+  "options": {},
+  "attributes": {
+    "MainTitle": {
+      "type": "string"
+    },
+    "MainDescription": {
+      "type": "text"
+    },
+    "HeadingDescriptionForItServices": {
+      "displayName": "HeadingDescriptionForItServices",
+      "type": "component",
+      "repeatable": true,
+      "component": "v1.heading-description-for-it-services"
+    }
+  }
+}

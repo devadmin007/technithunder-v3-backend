@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_v1_what_you_needs",
+  "info": {
+    "displayName": "WhatYouNeed"
+  },
+  "options": {},
+  "attributes": {
+    "MainTitle": {
+      "type": "string"
+    },
+    "MainImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "SubImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Description": {
+      "displayName": "Description",
+      "type": "component",
+      "repeatable": true,
+      "component": "v1.description"
+    }
+  }
+}
