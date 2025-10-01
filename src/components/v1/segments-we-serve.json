@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_v1_segments_we_serves",
+  "info": {
+    "displayName": "SegmentsWeServe"
+  },
+  "options": {},
+  "attributes": {
+    "MainTitle": {
+      "type": "string"
+    },
+    "MainDescription": {
+      "type": "text"
+    },
+    "headingDescriptionForWeServe": {
+      "displayName": "headingDescriptionForWeServe",
+      "type": "component",
+      "repeatable": true,
+      "component": "v1.heading-description-for-we-serve"
+    }
+  }
+}

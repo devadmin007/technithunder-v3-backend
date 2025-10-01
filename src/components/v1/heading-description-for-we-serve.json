@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_v1_heading_description_for_we_serves",
+  "info": {
+    "displayName": "headingDescriptionForWeServe"
+  },
+  "options": {},
+  "attributes": {
+    "SubTitle": {
+      "type": "string"
+    },
+    "SubDescription": {
+      "type": "text"
+    }
+  }
+}

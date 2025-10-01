@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_v1_heading_description_for_it_services",
+  "info": {
+    "displayName": "HeadingDescriptionForItServices"
+  },
+  "options": {},
+  "attributes": {
+    "SubTitle": {
+      "type": "string"
+    },
+    "SubDescription": {
+      "type": "text"
+    },
+    "bulletedListRichText": {
+      "type": "richtext"
+    }
+  }
+}

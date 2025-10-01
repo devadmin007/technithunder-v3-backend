@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "industries",
+  "info": {
+    "singularName": "industry",
+    "pluralName": "industries",
+    "displayName": "Industry"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Industry": {
+      "type": "string"
+    },
+    "IndustryName": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "HeroTitle": {
+      "type": "string"
+    },
+    "HeroDescription": {
+      "type": "text"
+    },
+    "HeroImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "HeroLogos": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "WeDevelop": {
+      "displayName": "WeDevelop",
+      "type": "component",
+      "repeatable": false,
+      "component": "v1.we-develop"
+    },
+    "SegmentsWeServe": {
+      "displayName": "SegmentsWeServe",
+      "type": "component",
+      "repeatable": false,
+      "component": "v1.segments-we-serve"
+    },
+    "ItServices": {
+      "displayName": "ItServices",
+      "type": "component",
+      "repeatable": false,
+      "component": "v1.it-services"
+    },
+    "WhatYouNeed": {
+      "displayName": "WhatYouNeed",
+      "type": "component",
+      "repeatable": false,
+      "component": "v1.what-you-need"
+    },
+    "IndustryRelatedQuestions": {
+      "displayName": "IndustryRelatedQuestions",
+      "type": "component",
+      "repeatable": false,
+      "component": "v1.industry-related-questions"
+    },
+    "faqs": {
+      "displayName": "faqs",
+      "type": "component",
+      "repeatable": true,
+      "component": "v1.faqs"
+    }
+  }
+}

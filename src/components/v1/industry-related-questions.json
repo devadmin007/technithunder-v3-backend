@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_v1_industry_related_questions",
+  "info": {
+    "displayName": "IndustryRelatedQuestions"
+  },
+  "options": {},
+  "attributes": {
+    "MainTitle": {
+      "type": "string"
+    },
+    "MainDescription": {
+      "type": "text"
+    },
+    "MainImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
