@@ -1,7 +1,8 @@
 {
   "collectionName": "components_v1_industry_related_questions",
   "info": {
-    "displayName": "IndustryRelatedQuestions"
+    "displayName": "IndustryRelatedQuestions",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -12,14 +13,18 @@
       "type": "text"
     },
     "MainImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "ButtonText": {
+      "type": "string"
     }
   }
 }

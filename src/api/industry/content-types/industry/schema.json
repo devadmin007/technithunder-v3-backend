@@ -83,6 +83,9 @@
       "type": "component",
       "repeatable": true,
       "component": "v1.faqs"
+    },
+    "ButtonText": {
+      "type": "string"
     }
   }
 }
