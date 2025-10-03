@@ -105,11 +105,13 @@ export interface V1HeadingDescriptionForItServices extends Schema.Component {
 export interface V1HeadingDescriptionForWeServe extends Schema.Component {
   collectionName: 'components_v1_heading_description_for_we_serves';
   info: {
+    description: '';
     displayName: 'headingDescriptionForWeServe';
   };
   attributes: {
     SubDescription: Attribute.Text;
     SubTitle: Attribute.String;
+    WeServeImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 

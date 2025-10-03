@@ -501,6 +501,7 @@ export interface ApiContactFormContactForm extends Schema.CollectionType {
 export interface ApiIndustryIndustry extends Schema.CollectionType {
   collectionName: 'industries';
   info: {
+    description: '';
     displayName: 'Industry';
     pluralName: 'industries';
     singularName: 'industry';
