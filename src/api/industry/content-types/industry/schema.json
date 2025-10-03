@@ -4,7 +4,8 @@
   "info": {
     "singularName": "industry",
     "pluralName": "industries",
-    "displayName": "Industry"
+    "displayName": "Industry",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -26,24 +27,26 @@
       "type": "text"
     },
     "HeroImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "HeroLogos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "WeDevelop": {
       "displayName": "WeDevelop",
