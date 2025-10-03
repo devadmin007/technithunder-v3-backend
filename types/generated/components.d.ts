@@ -50,10 +50,12 @@ export interface V1CasestudyContent extends Schema.Component {
 export interface V1Description extends Schema.Component {
   collectionName: 'components_v1_descriptions';
   info: {
+    description: '';
     displayName: 'Description';
   };
   attributes: {
     Descriptions: Attribute.Text;
+    title: Attribute.String;
   };
 }
 
@@ -140,9 +142,11 @@ export interface V1Image extends Schema.Component {
 export interface V1IndustryRelatedQuestions extends Schema.Component {
   collectionName: 'components_v1_industry_related_questions';
   info: {
+    description: '';
     displayName: 'IndustryRelatedQuestions';
   };
   attributes: {
+    ButtonText: Attribute.String;
     MainDescription: Attribute.Text;
     MainImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     MainTitle: Attribute.String;
@@ -378,9 +382,11 @@ export interface V1WeServe extends Schema.Component {
 export interface V1WhatYouNeed extends Schema.Component {
   collectionName: 'components_v1_what_you_needs';
   info: {
+    description: '';
     displayName: 'WhatYouNeed';
   };
   attributes: {
+    ButtonText: Attribute.String;
     Description: Attribute.Component<'v1.description', true>;
     MainImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     MainTitle: Attribute.String;

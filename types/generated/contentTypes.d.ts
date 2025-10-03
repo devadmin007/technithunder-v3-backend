@@ -510,6 +510,7 @@ export interface ApiIndustryIndustry extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
+    ButtonText: Attribute.String;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::industry.industry',

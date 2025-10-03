@@ -1,12 +1,16 @@
 {
   "collectionName": "components_v1_descriptions",
   "info": {
-    "displayName": "Description"
+    "displayName": "Description",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Descriptions": {
       "type": "text"
+    },
+    "title": {
+      "type": "string"
     }
   }
 }
