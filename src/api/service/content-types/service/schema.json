@@ -14,11 +14,11 @@
     "category": {
       "type": "enumeration",
       "enum": [
-        "E-commerce",
-        "Mobile",
-        "Startup",
-        "Digital Transformation",
-        "Dedicated Developers"
+        "E-commerce Solutions",
+        "Software Engineering",
+        "Application Services",
+        "Digital Solutions",
+        "Business Solutions"
       ]
     },
     "serviceName": {
