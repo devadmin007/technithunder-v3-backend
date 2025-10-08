@@ -86,6 +86,9 @@
     },
     "ButtonText": {
       "type": "string"
+    },
+    "headerText": {
+      "type": "string"
     }
   }
 }

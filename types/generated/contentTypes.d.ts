@@ -498,6 +498,33 @@ export interface ApiContactFormContactForm extends Schema.CollectionType {
   };
 }
 
+export interface ApiHireHire extends Schema.CollectionType {
+  collectionName: 'hires';
+  info: {
+    displayName: 'hire';
+    pluralName: 'hires';
+    singularName: 'hire';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Attribute.Enumeration<
+      ['Mobile App Developers', 'Frontend Developers', 'Backend Developers']
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::hire.hire', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    HireName: Attribute.String;
+    MainTitle: Attribute.String;
+    publishedAt: Attribute.DateTime;
+    slug: Attribute.UID;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<'api::hire.hire', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiIndustryIndustry extends Schema.CollectionType {
   collectionName: 'industries';
   info: {
@@ -519,6 +546,7 @@ export interface ApiIndustryIndustry extends Schema.CollectionType {
     > &
       Attribute.Private;
     faqs: Attribute.Component<'v1.faqs', true>;
+    headerText: Attribute.String;
     HeroDescription: Attribute.Text;
     HeroImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     HeroLogos: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
@@ -555,11 +583,11 @@ export interface ApiServiceService extends Schema.CollectionType {
   attributes: {
     category: Attribute.Enumeration<
       [
-        'E-commerce',
-        'Mobile',
-        'Startup',
-        'Digital Transformation',
-        'Dedicated Developers'
+        'E-commerce Solutions',
+        'Software Engineering',
+        'Application Services',
+        'Digital Solutions',
+        'Business Solutions'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -1008,6 +1036,7 @@ declare module '@strapi/types' {
       'api::casestudy.casestudy': ApiCasestudyCasestudy;
       'api::comment.comment': ApiCommentComment;
       'api::contact-form.contact-form': ApiContactFormContactForm;
+      'api::hire.hire': ApiHireHire;
       'api::industry.industry': ApiIndustryIndustry;
       'api::service.service': ApiServiceService;
       'api::team.team': ApiTeamTeam;

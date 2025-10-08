@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hires",
+  "info": {
+    "singularName": "hire",
+    "pluralName": "hires",
+    "displayName": "hire"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Mobile App Developers",
+        "Frontend Developers",
+        "Backend Developers"
+      ]
+    },
+    "HireName": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "MainTitle": {
+      "type": "string"
+    }
+  }
+}
