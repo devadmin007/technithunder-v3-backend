@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_v1_client_reviews",
+  "info": {
+    "displayName": "ClientReviews"
+  },
+  "options": {},
+  "attributes": {
+    "ClientWords": {
+      "type": "text"
+    },
+    "ClientName": {
+      "type": "string"
+    },
+    "ClientPost": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

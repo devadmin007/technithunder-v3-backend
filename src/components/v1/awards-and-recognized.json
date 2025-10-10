@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_v1_awards_and_recognizeds",
+  "info": {
+    "displayName": "AwardsAndRecognized"
+  },
+  "options": {},
+  "attributes": {
+    "AwardImage": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

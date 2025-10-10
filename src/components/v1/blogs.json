@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_v1_blogs",
+  "info": {
+    "displayName": "Blogs"
+  },
+  "options": {},
+  "attributes": {
+    "ButtonText": {
+      "type": "string"
+    },
+    "SingleBlog": {
+      "type": "component",
+      "component": "v1.single-blog",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

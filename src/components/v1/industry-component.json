@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_v1_industry_components",
+  "info": {
+    "displayName": "IndustryComponent"
+  },
+  "options": {},
+  "attributes": {
+    "MainTitle": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "ButtonText": {
+      "type": "string"
+    },
+    "Cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "v1.cards"
+    }
+  }
+}

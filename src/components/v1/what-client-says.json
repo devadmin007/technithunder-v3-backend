@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_v1_what_client_says",
+  "info": {
+    "displayName": "WhatClientSays"
+  },
+  "options": {},
+  "attributes": {
+    "ClientReviews": {
+      "type": "component",
+      "component": "v1.client-reviews",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

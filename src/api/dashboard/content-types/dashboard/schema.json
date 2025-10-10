@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dashboards",
+  "info": {
+    "singularName": "dashboard",
+    "pluralName": "dashboards",
+    "displayName": "Dashboard"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeroComponent": {
+      "type": "component",
+      "component": "v1.hero-component",
+      "repeatable": false
+    },
+    "ServiceComponent": {
+      "type": "component",
+      "component": "v1.service-component",
+      "repeatable": false
+    },
+    "WhoweAreComponent": {
+      "type": "component",
+      "component": "v1.who-we-are-component",
+      "repeatable": false
+    },
+    "IndustryComponent": {
+      "type": "component",
+      "component": "v1.industry-component",
+      "repeatable": false
+    },
+    "ProcessFlow": {
+      "type": "component",
+      "component": "v1.process-flow",
+      "repeatable": false
+    },
+    "ToolsAndTechnology": {
+      "type": "component",
+      "component": "v1.tools-and-technology",
+      "repeatable": false
+    },
+    "CaseStudys": {
+      "type": "component",
+      "component": "v1.case-studys",
+      "repeatable": false
+    },
+    "WhatClientSays": {
+      "type": "component",
+      "component": "v1.what-client-says",
+      "repeatable": false
+    },
+    "Blogs": {
+      "type": "component",
+      "component": "v1.blogs",
+      "repeatable": false
+    },
+    "ReadyToEmbrance": {
+      "type": "component",
+      "component": "v1.ready-to-embrance",
+      "repeatable": false
+    },
+    "AwardsAndRecognized": {
+      "type": "component",
+      "component": "v1.awards-and-recognized",
+      "repeatable": false
+    },
+    "faqs": {
+      "type": "component",
+      "component": "v1.faqs",
+      "repeatable": true
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_v1_hero_components",
+  "info": {
+    "displayName": "HeroComponent"
+  },
+  "options": {},
+  "attributes": {
+    "subTitle": {
+      "type": "string"
+    },
+    "MainTitle": {
+      "type": "string"
+    },
+    "ButtonText": {
+      "type": "string"
+    },
+    "RatingText": {
+      "type": "string"
+    },
+    "RatingNumber": {
+      "type": "decimal"
+    },
+    "MainImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Logos": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

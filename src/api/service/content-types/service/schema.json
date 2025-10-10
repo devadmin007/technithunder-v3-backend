@@ -14,12 +14,15 @@
     "category": {
       "type": "enumeration",
       "enum": [
-        "E-commerce Solutions",
-        "Software Engineering",
-        "Application Services",
-        "Digital Solutions",
+        "Ecommerce",
+        "Software",
+        "Application",
+        "Digital",
         "Business Solutions"
       ]
+    },
+    "CategoryFullName": {
+      "type": "string"
     },
     "serviceName": {
       "type": "string"

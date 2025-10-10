@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_v1_who_we_are_components",
+  "info": {
+    "displayName": "WhoWeAreComponent"
+  },
+  "options": {},
+  "attributes": {
+    "MainTitle": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "component",
+      "repeatable": true,
+      "component": "v1.description"
+    },
+    "ButtonText": {
+      "type": "string"
+    },
+    "Logos": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "YearsInBusiness": {
+      "type": "integer"
+    },
+    "GlobalClients": {
+      "type": "integer"
+    },
+    "TechExperts": {
+      "type": "integer"
+    }
+  }
+}
