@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_v1_technology_images",
+  "info": {
+    "displayName": "technologyImage"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Logos": {
+      "type": "component",
+      "component": "v1.logo",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

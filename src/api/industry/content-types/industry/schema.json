@@ -10,6 +10,7 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "Industry": {
       "type": "string"
@@ -19,6 +20,9 @@
     },
     "slug": {
       "type": "uid"
+    },
+    "headerText": {
+      "type": "string"
     },
     "HeroTitle": {
       "type": "string"
@@ -48,47 +52,38 @@
         "audios"
       ]
     },
-    "WeDevelop": {
-      "displayName": "WeDevelop",
-      "type": "component",
-      "repeatable": false,
-      "component": "v1.we-develop"
-    },
-    "SegmentsWeServe": {
-      "displayName": "SegmentsWeServe",
-      "type": "component",
-      "repeatable": false,
-      "component": "v1.segments-we-serve"
-    },
-    "ItServices": {
-      "displayName": "ItServices",
-      "type": "component",
-      "repeatable": false,
-      "component": "v1.it-services"
-    },
-    "WhatYouNeed": {
-      "displayName": "WhatYouNeed",
-      "type": "component",
-      "repeatable": false,
-      "component": "v1.what-you-need"
-    },
-    "IndustryRelatedQuestions": {
-      "displayName": "IndustryRelatedQuestions",
-      "type": "component",
-      "repeatable": false,
-      "component": "v1.industry-related-questions"
-    },
-    "faqs": {
-      "displayName": "faqs",
-      "type": "component",
-      "repeatable": true,
-      "component": "v1.faqs"
-    },
     "ButtonText": {
       "type": "string"
     },
-    "headerText": {
-      "type": "string"
+    "WeDevelop": {
+      "type": "component",
+      "component": "v1.we-develop",
+      "repeatable": false
+    },
+    "SegmentsWeServe": {
+      "type": "component",
+      "component": "v1.segments-we-serve",
+      "repeatable": false
+    },
+    "ItServices": {
+      "type": "component",
+      "component": "v1.it-services",
+      "repeatable": false
+    },
+    "WhatYouNeed": {
+      "type": "component",
+      "component": "v1.what-you-need",
+      "repeatable": false
+    },
+    "IndustryRelatedQuestions": {
+      "type": "component",
+      "component": "v1.industry-related-questions",
+      "repeatable": false
+    },
+    "faqs": {
+      "type": "component",
+      "component": "v1.faqs",
+      "repeatable": true
     }
   }
 }

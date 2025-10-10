@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_v1_process_flows",
+  "info": {
+    "displayName": "ProcessFlow"
+  },
+  "options": {},
+  "attributes": {
+    "ProcessFlowSteps": {
+      "displayName": "ProcessFlowSteps",
+      "type": "component",
+      "repeatable": true,
+      "component": "v1.process-flow-steps"
+    }
+  }
+}

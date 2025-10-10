@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_v1_single_blogs",
+  "info": {
+    "displayName": "SingleBlog"
+  },
+  "options": {},
+  "attributes": {
+    "BlogImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "TechnologyName": {
+      "type": "string"
+    },
+    "PublishDate": {
+      "type": "date"
+    },
+    "BlogTitle": {
+      "type": "string"
+    },
+    "BlogDescription": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

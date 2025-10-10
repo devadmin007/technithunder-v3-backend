@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_v1_ready_to_embrances",
+  "info": {
+    "displayName": "ReadyToEmbrance"
+  },
+  "options": {},
+  "attributes": {
+    "MainTitle": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "ButtonText": {
+      "type": "string"
+    },
+    "YearsInService": {
+      "type": "integer"
+    },
+    "GlobalClients": {
+      "type": "integer"
+    },
+    "TechExpert": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}
