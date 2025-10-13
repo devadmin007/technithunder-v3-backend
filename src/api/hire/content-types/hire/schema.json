@@ -14,9 +14,9 @@
     "category": {
       "type": "enumeration",
       "enum": [
-        "Mobile App Developers",
-        "Frontend Developers",
-        "Backend Developers"
+        "Mobile App",
+        "Frontend ",
+        "Backend"
       ]
     },
     "HireFullName": {

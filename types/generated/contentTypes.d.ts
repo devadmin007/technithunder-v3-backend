@@ -565,7 +565,7 @@ export interface ApiHireHire extends Struct.CollectionTypeSchema {
   };
   attributes: {
     category: Schema.Attribute.Enumeration<
-      ['Mobile App Developers', 'Frontend Developers', 'Backend Developers']
+      ['Mobile App', 'Frontend ', 'Backend']
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
