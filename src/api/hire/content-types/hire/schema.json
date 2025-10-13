@@ -9,6 +9,7 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "category": {
       "type": "enumeration",
@@ -17,6 +18,9 @@
         "Frontend Developers",
         "Backend Developers"
       ]
+    },
+    "HireFullName": {
+      "type": "string"
     },
     "HireName": {
       "type": "string"
