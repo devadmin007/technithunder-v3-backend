@@ -25,6 +25,19 @@
     },
     "projectDescription": {
       "type": "text"
+    },
+    "budget": {
+      "type": "string"
+    },
+    "file": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

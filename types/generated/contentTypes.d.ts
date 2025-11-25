@@ -481,11 +481,16 @@ export interface ApiContactFormContactForm extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    budget: Schema.Attribute.String;
     businessEmail: Schema.Attribute.Email;
     countryCode: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    file: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
