@@ -63,7 +63,7 @@ module.exports = createCoreController('api::contact-form.contact-form', ({ strap
       // Prepare file URLs for email
       let fileLinks = 'No files attached';
       if (completeEntry.file && Array.isArray(completeEntry.file) && completeEntry.file.length > 0) {
-        const baseUrl = process.env.NEXT_PUBLIC_API_URL ??;
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL ?? "https://methodical-memory-2417506b70.strapiapp.com/api";
         fileLinks = completeEntry.file.map(file =>
           `<a href="${baseUrl}${file.url}">${file.name}</a>`
         ).join(', ');
