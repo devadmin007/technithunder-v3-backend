@@ -63,7 +63,7 @@ module.exports = createCoreController('api::contact-form.contact-form', ({ strap
       // Prepare file URLs for email
       let fileLinks = 'No files attached';
       if (completeEntry.file && Array.isArray(completeEntry.file) && completeEntry.file.length > 0) {
-        const baseUrl = process.env.NEXT_PUBLIC_API_URL || null;
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL;
         fileLinks = completeEntry.file.map(file =>
           `<a href="${baseUrl}${file.url}">${file.name}</a>`
         ).join(', ');
@@ -111,19 +111,19 @@ module.exports = createCoreController('api::contact-form.contact-form', ({ strap
   </tr>
 </table>
 `;
-
-        await strapi.plugin('email').service('email').send({
-          to: process.env.ADMIN_EMAIL,
-          from: process.env.SMTP_USERNAME,
-          subject: '📩 New Contact Form Submission',
-          html: adminHtml,
-        });
-
-        console.log("from: process.env.SMTP_USERNAME====>",process.env.SMTP_USERNAME);
-        console.log("to: process.env.ADMIN_EMAIL====>",process.env.ADMIN_EMAIL);
-        
-
-        console.log("✅ Admin email sent");
+        try {
+          strapi.log.info("from: process.env.SMTP_USERNAME====>", process.env.SMTP_USERNAME);
+          strapi.log.info("to: process.env.ADMIN_EMAIL====>", process.env.ADMIN_EMAIL);
+          await strapi.plugin('email').service('email').send({
+            to: process.env.ADMIN_EMAIL,
+            from: process.env.SMTP_USERNAME,
+            subject: '📩 New Contact Form Submission',
+            html: adminHtml,
+          });
+          strapi.log.info("EMAIL SENT OK");
+        } catch (err) {
+          strapi.log.error("EMAIL ERROR:", err);
+        }
 
         // 2. Send confirmation email to User
         const htmlTemplate = `
@@ -160,14 +160,20 @@ module.exports = createCoreController('api::contact-form.contact-form', ({ strap
 </table>
 `;
 
-        await strapi.plugin('email').service('email').send({
-          to: completeEntry.businessEmail,
-          from: process.env.SMTP_USERNAME,
-          subject: '✅ Thanks for contacting us!',
-          html: htmlTemplate,
-        });
+        try {
+          strapi.log.info("from: process.env.SMTP_USERNAME", process.env.SMTP_USERNAME);
+          strapi.log.info("to: completeEntry.businessEmail", completeEntry.businessEmail);
+          await strapi.plugin('email').service('email').send({
+            to: completeEntry.businessEmail,
+            from: process.env.SMTP_USERNAME,
+            subject: '✅ Thanks for contacting us!',
+            html: htmlTemplate,
+          });
+          strapi.log.info("EMAIL SENT OK");
+        } catch (err) {
+          strapi.log.error("EMAIL ERROR:", err);
+        }
 
-        console.log("✅ User email sent");
 
       } catch (emailErr) {
         strapi.log.error('❌ Email sending failed:', emailErr);
