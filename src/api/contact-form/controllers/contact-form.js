@@ -11,13 +11,13 @@ module.exports = createCoreController('api::contact-form.contact-form', ({ strap
     try {
       // Get data from request body
       const { data } = ctx.request.body;
-      
+
       // Get files from request
       const uploadedFiles = ctx.request.files;
-      
+
       console.log("📝 Request Data:", data);
       console.log("📁 Files:", uploadedFiles);
-      
+
       // Parse data if it's a string
       const parsedData = typeof data === 'string' ? JSON.parse(data) : data;
 
@@ -32,7 +32,7 @@ module.exports = createCoreController('api::contact-form.contact-form', ({ strap
       if (uploadedFiles && uploadedFiles['files.file']) {
         const fileField = uploadedFiles['files.file'];
         const fileArray = Array.isArray(fileField) ? fileField : [fileField];
-        
+
         console.log("📤 Uploading files...");
 
         // Upload each file
@@ -46,7 +46,7 @@ module.exports = createCoreController('api::contact-form.contact-form', ({ strap
             },
             files: file,
           });
-          
+
           console.log("✅ File uploaded:", uploadedFile[0].name);
           uploadedFileIds.push(uploadedFile[0].id);
         }
@@ -64,10 +64,12 @@ module.exports = createCoreController('api::contact-form.contact-form', ({ strap
       let fileLinks = 'No files attached';
       if (completeEntry.file && Array.isArray(completeEntry.file) && completeEntry.file.length > 0) {
         const baseUrl = process.env.NEXT_PUBLIC_API_URL || null;
-        fileLinks = completeEntry.file.map(file => 
+        fileLinks = completeEntry.file.map(file =>
           `<a href="${baseUrl}${file.url}">${file.name}</a>`
         ).join(', ');
       }
+      console.log("process.env.NEXT_PUBLIC_API_URL-=====>", process.env.NEXT_PUBLIC_API_URL);
+
 
       try {
         // 1. Send email to Admin
@@ -116,6 +118,10 @@ module.exports = createCoreController('api::contact-form.contact-form', ({ strap
           subject: '📩 New Contact Form Submission',
           html: adminHtml,
         });
+
+        console.log("from: process.env.SMTP_USERNAME====>",process.env.SMTP_USERNAME);
+        console.log("to: process.env.ADMIN_EMAIL====>",process.env.ADMIN_EMAIL);
+        
 
         console.log("✅ Admin email sent");
 
@@ -169,9 +175,9 @@ module.exports = createCoreController('api::contact-form.contact-form', ({ strap
       }
 
       // Return success response
-      return { 
+      return {
         data: completeEntry,
-        message: 'Form submitted successfully' 
+        message: 'Form submitted successfully'
       };
 
     } catch (error) {
