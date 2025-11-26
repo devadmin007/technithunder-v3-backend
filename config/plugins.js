@@ -20,7 +20,7 @@
 module.exports = ({ env }) => ({
   email: {
     config: {
-      provider: "nodemailer",
+      provider: "strapi-provider-email-smtp",
       providerOptions: {
         host: env("SMTP_HOST", "smtp.gmail.com"),
         port: env.int("SMTP_PORT", 587),
