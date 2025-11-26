@@ -49,13 +49,13 @@ module.exports = ({ env }) => ({
         port: 587,
         secure: false,
         auth: {
-          user: env("SMTP_USERNAME"),
-          pass: env("SMTP_PASSWORD"),
+          user: env("vparmaroffice@gmail.com"),
+          pass: env("gest cgqd cdms oyig"),
         },
       },
       settings: {
-        defaultFrom: env("SMTP_FROM"),
-        defaultReplyTo: env("SMTP_FROM"),
+        defaultFrom: env("postmaster@sandboxb52f62cc311d46a1939e0cb2740cb798.mailgun.org"),
+        defaultReplyTo: env("postmaster@sandboxb52f62cc311d46a1939e0cb2740cb798.mailgun.org"),
       },
     },
   },
