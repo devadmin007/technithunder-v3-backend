@@ -49,7 +49,7 @@ module.exports = ({ env }) => ({
         port: 587,
         secure: false,
         auth: {
-          user: "vparmaroffice@gmail.com",
+          user: "vparmar@sandboxb52f62cc311d46a1939e0cb2740cb798.mailgun.org",
           pass: "Thunder@9090",
         },
       },
