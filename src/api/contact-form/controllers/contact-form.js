@@ -63,7 +63,7 @@ module.exports = createCoreController('api::contact-form.contact-form', ({ strap
       // Prepare file URLs for email
       let fileLinks = 'No files attached';
       if (completeEntry.file && Array.isArray(completeEntry.file) && completeEntry.file.length > 0) {
-        const baseUrl = process.env.PUBLIC_URL || 'http://localhost:1337';
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL || null;
         fileLinks = completeEntry.file.map(file => 
           `<a href="${baseUrl}${file.url}">${file.name}</a>`
         ).join(', ');
