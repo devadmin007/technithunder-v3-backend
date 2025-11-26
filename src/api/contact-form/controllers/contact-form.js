@@ -59,6 +59,7 @@ module.exports = createCoreController('api::contact-form.contact-form', ({ strap
       });
 
       console.log("✅ Complete Entry:", JSON.stringify(completeEntry, null, 2));
+      console.log("✅ Complete Entry:", JSON.stringify(completeEntry.businessEmail, null, 2));
 
       // Prepare file URLs for email
       let fileLinks = 'No files attached';
@@ -116,7 +117,9 @@ module.exports = createCoreController('api::contact-form.contact-form', ({ strap
           strapi.log.info("to: process.env.ADMIN_EMAIL====>", process.env.ADMIN_EMAIL);
           await strapi.plugin('email').service('email').send({
             to: process.env.ADMIN_EMAIL,
+            // to: "vparmar@technithunder.com",
             from: process.env.SMTP_USERNAME,
+            // from: process.env.SMTP_USERNAME,
             subject: '📩 New Contact Form Submission',
             html: adminHtml,
           });
