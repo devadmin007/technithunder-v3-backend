@@ -54,8 +54,8 @@ module.exports = ({ env }) => ({
         },
       },
       settings: {
-        defaultFrom: "postmaster@sandboxb52f62cc311d46a1939e0cb2740cb798.mailgun.org",
-        defaultReplyTo:"postmaster@sandboxb52f62cc311d46a1939e0cb2740cb798.mailgun.org",
+        defaultFrom: "vparmar@sandboxb52f62cc311d46a1939e0cb2740cb798.mailgun.org",
+        defaultReplyTo:"vparmar@sandboxb52f62cc311d46a1939e0cb2740cb798.mailgun.org",
       },
     },
   },
