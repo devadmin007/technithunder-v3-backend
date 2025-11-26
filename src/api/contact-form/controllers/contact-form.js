@@ -168,7 +168,7 @@ module.exports = createCoreController('api::contact-form.contact-form', ({ strap
           strapi.log.info("to: completeEntry.businessEmail", completeEntry.businessEmail);
           await strapi.plugin('email').service('email').send({
             to: completeEntry.businessEmail,
-            from: "vparmar@sandboxb52f62cc311d46a1939e0cb2740cb798.mailgun.org",
+            from: "postmaster@sandboxb52f62cc311d46a1939e0cb2740cb798.mailgun.org",
             subject: '✅ Thanks for contacting us!',
             html: htmlTemplate,
           });
