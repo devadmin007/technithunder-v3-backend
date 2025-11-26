@@ -42,19 +42,21 @@
 // });
 module.exports = ({ env }) => ({
   email: {
-    provider: "strapi-provider-email-smtp",
-    providerOptions: {
-      host: env("SMTP_HOST"),
-      port: env.int("SMTP_PORT", 587),
-      secure: false,
-      auth: {
-        user: env("SMTP_USERNAME"),
-        pass: env("SMTP_PASSWORD"),
+    config: {
+      provider: "strapi-provider-email-smtp",
+      providerOptions: {
+        host: "smtp.mailgun.org",
+        port: 587,
+        secure: false,
+        auth: {
+          user: env("SMTP_USERNAME"),
+          pass: env("SMTP_PASSWORD"),
+        },
       },
-    },
-    settings: {
-      defaultFrom: env("SMTP_USERNAME"),
-      defaultReplyTo: env("SMTP_USERNAME"),
+      settings: {
+        defaultFrom: env("SMTP_FROM"),
+        defaultReplyTo: env("SMTP_FROM"),
+      },
     },
   },
 });
