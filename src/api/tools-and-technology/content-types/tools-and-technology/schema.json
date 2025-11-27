@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tools_and_technologies",
+  "info": {
+    "singularName": "tools-and-technology",
+    "pluralName": "tools-and-technologies",
+    "displayName": "ToolsAndTechnology"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Technology": {
+      "type": "component",
+      "component": "v1.technology",
+      "repeatable": true
+    }
+  }
+}
