@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_study_components",
+  "info": {
+    "singularName": "case-study-component",
+    "pluralName": "case-study-components",
+    "displayName": "CaseStudyComponent"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CaseStudys": {
+      "type": "component",
+      "component": "v1.case-studys",
+      "repeatable": false
+    }
+  }
+}
