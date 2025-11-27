@@ -683,6 +683,7 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    HeroPoints: Schema.Attribute.RichText;
     HeroTitle: Schema.Attribute.String;
     Industry: Schema.Attribute.String;
     IndustryName: Schema.Attribute.String;
