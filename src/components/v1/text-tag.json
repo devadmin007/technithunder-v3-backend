@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_v1_text_tags",
+  "info": {
+    "displayName": "TextTag"
+  },
+  "options": {},
+  "attributes": {
+    "TextTag": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

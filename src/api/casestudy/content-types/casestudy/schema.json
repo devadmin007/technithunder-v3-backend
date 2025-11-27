@@ -11,6 +11,22 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "Industry": {
+      "type": "enumeration",
+      "enum": [
+        "Ecommerce",
+        "Travel",
+        "FinTech",
+        "Healthcare"
+      ]
+    },
+    "plateform": {
+      "type": "enumeration",
+      "enum": [
+        "Web Development",
+        "App Development"
+      ]
+    },
     "ThumbnailImg": {
       "type": "media",
       "multiple": false,
@@ -27,11 +43,26 @@
         "files"
       ]
     },
+    "HeroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
     "title": {
       "type": "string"
     },
     "description": {
       "type": "text"
+    },
+    "TextTag": {
+      "type": "component",
+      "component": "v1.text-tag",
+      "repeatable": true
     },
     "Skill": {
       "type": "component",
@@ -42,6 +73,11 @@
       "type": "component",
       "component": "v1.casestudy-content",
       "repeatable": false
+    },
+    "faqs": {
+      "type": "component",
+      "component": "v1.faqs",
+      "repeatable": true
     }
   }
 }
