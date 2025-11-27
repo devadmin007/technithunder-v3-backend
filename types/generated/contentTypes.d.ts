@@ -423,6 +423,11 @@ export interface ApiCasestudyCasestudy extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
+    faqs: Schema.Attribute.Component<'v1.faqs', true>;
+    HeroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Industry: Schema.Attribute.Enumeration<
+      ['Ecommerce', 'Travel', 'FinTech', 'Healthcare']
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -430,8 +435,12 @@ export interface ApiCasestudyCasestudy extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     LogoImg: Schema.Attribute.Media<'images' | 'files'>;
+    plateform: Schema.Attribute.Enumeration<
+      ['Web Development', 'App Development']
+    >;
     publishedAt: Schema.Attribute.DateTime;
     Skill: Schema.Attribute.Component<'v1.skills', true>;
+    TextTag: Schema.Attribute.Component<'v1.text-tag', true>;
     ThumbnailImg: Schema.Attribute.Media<'images' | 'files'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;

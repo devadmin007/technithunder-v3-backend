@@ -538,6 +538,16 @@ export interface V1TextComponent extends Struct.ComponentSchema {
   };
 }
 
+export interface V1TextTag extends Struct.ComponentSchema {
+  collectionName: 'components_v1_text_tags';
+  info: {
+    displayName: 'TextTag';
+  };
+  attributes: {
+    TextTag: Schema.Attribute.String;
+  };
+}
+
 export interface V1TitleDescriptionComponent extends Struct.ComponentSchema {
   collectionName: 'components_v1_title_description_components';
   info: {
@@ -689,6 +699,7 @@ declare module '@strapi/strapi' {
       'v1.tags': V1Tags;
       'v1.technology-image': V1TechnologyImage;
       'v1.text-component': V1TextComponent;
+      'v1.text-tag': V1TextTag;
       'v1.title-description-component': V1TitleDescriptionComponent;
       'v1.tools-and-technology': V1ToolsAndTechnology;
       'v1.we-develop': V1WeDevelop;
