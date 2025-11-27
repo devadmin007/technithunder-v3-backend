@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_v1_technology_groups",
+  "info": {
+    "displayName": "TechnologyGroup"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "TechnologyImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

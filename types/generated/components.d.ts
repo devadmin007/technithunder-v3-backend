@@ -525,6 +525,31 @@ export interface V1Tags extends Struct.ComponentSchema {
   };
 }
 
+export interface V1Technology extends Struct.ComponentSchema {
+  collectionName: 'components_v1_technologies';
+  info: {
+    displayName: 'Technology';
+  };
+  attributes: {
+    TechnologyGroup: Schema.Attribute.Component<'v1.technology-group', true>;
+    TechnologyName: Schema.Attribute.String;
+    Technologytag: Schema.Attribute.String;
+  };
+}
+
+export interface V1TechnologyGroup extends Struct.ComponentSchema {
+  collectionName: 'components_v1_technology_groups';
+  info: {
+    displayName: 'TechnologyGroup';
+  };
+  attributes: {
+    Name: Schema.Attribute.String;
+    TechnologyImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+  };
+}
+
 export interface V1TechnologyImage extends Struct.ComponentSchema {
   collectionName: 'components_v1_technology_images';
   info: {
@@ -706,6 +731,8 @@ declare module '@strapi/strapi' {
       'v1.skills': V1Skills;
       'v1.solution-description-component': V1SolutionDescriptionComponent;
       'v1.tags': V1Tags;
+      'v1.technology': V1Technology;
+      'v1.technology-group': V1TechnologyGroup;
       'v1.technology-image': V1TechnologyImage;
       'v1.text-component': V1TextComponent;
       'v1.text-tag': V1TextTag;

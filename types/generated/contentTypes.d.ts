@@ -790,6 +790,36 @@ export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiToolsAndTechnologyToolsAndTechnology
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'tools_and_technologies';
+  info: {
+    displayName: 'ToolsAndTechnology';
+    pluralName: 'tools-and-technologies';
+    singularName: 'tools-and-technology';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tools-and-technology.tools-and-technology'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Technology: Schema.Attribute.Component<'v1.technology', true>;
+    Title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1310,6 +1340,7 @@ declare module '@strapi/strapi' {
       'api::industry.industry': ApiIndustryIndustry;
       'api::service.service': ApiServiceService;
       'api::team.team': ApiTeamTeam;
+      'api::tools-and-technology.tools-and-technology': ApiToolsAndTechnologyToolsAndTechnology;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_v1_technologies",
+  "info": {
+    "displayName": "Technology"
+  },
+  "options": {},
+  "attributes": {
+    "TechnologyName": {
+      "type": "string"
+    },
+    "Technologytag": {
+      "type": "string"
+    },
+    "TechnologyGroup": {
+      "type": "component",
+      "component": "v1.technology-group",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
