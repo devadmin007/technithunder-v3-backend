@@ -30,6 +30,9 @@
     "HeroDescription": {
       "type": "text"
     },
+    "HeroPoints": {
+      "type": "richtext"
+    },
     "HeroImage": {
       "type": "media",
       "multiple": false,
