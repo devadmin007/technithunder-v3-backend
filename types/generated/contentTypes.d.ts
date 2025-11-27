@@ -407,6 +407,66 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCaseStudyComponentCaseStudyComponent
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'case_study_components';
+  info: {
+    displayName: 'CaseStudyComponent';
+    pluralName: 'case-study-components';
+    singularName: 'case-study-component';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    CaseStudys: Schema.Attribute.Component<'v1.case-studys', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::case-study-component.case-study-component'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCaseStudyHeroComponentCaseStudyHeroComponent
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'case_study_hero_components';
+  info: {
+    displayName: 'CaseStudyHeroComponent';
+    pluralName: 'case-study-hero-components';
+    singularName: 'case-study-hero-component';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Description: Schema.Attribute.Text;
+    HeroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::case-study-hero-component.case-study-hero-component'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCasestudyCasestudy extends Struct.CollectionTypeSchema {
   collectionName: 'casestudies';
   info: {
@@ -440,6 +500,7 @@ export interface ApiCasestudyCasestudy extends Struct.CollectionTypeSchema {
     >;
     publishedAt: Schema.Attribute.DateTime;
     Skill: Schema.Attribute.Component<'v1.skills', true>;
+    slug: Schema.Attribute.UID;
     TextTag: Schema.Attribute.Component<'v1.text-tag', true>;
     ThumbnailImg: Schema.Attribute.Media<'images' | 'files'>;
     title: Schema.Attribute.String;
@@ -1238,6 +1299,8 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::blog.blog': ApiBlogBlog;
+      'api::case-study-component.case-study-component': ApiCaseStudyComponentCaseStudyComponent;
+      'api::case-study-hero-component.case-study-hero-component': ApiCaseStudyHeroComponentCaseStudyHeroComponent;
       'api::casestudy.casestudy': ApiCasestudyCasestudy;
       'api::comment.comment': ApiCommentComment;
       'api::contact-form.contact-form': ApiContactFormContactForm;

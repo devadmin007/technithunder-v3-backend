@@ -36,6 +36,14 @@ export interface V1Blogs extends Struct.ComponentSchema {
   };
 }
 
+export interface V1CardComponent extends Struct.ComponentSchema {
+  collectionName: 'components_v1_card_components';
+  info: {
+    displayName: 'CardComponent';
+  };
+  attributes: {};
+}
+
 export interface V1Cards extends Struct.ComponentSchema {
   collectionName: 'components_v1_cards';
   info: {
@@ -661,6 +669,7 @@ declare module '@strapi/strapi' {
       'v1.about-title-info-logo-component': V1AboutTitleInfoLogoComponent;
       'v1.awards-and-recognized': V1AwardsAndRecognized;
       'v1.blogs': V1Blogs;
+      'v1.card-component': V1CardComponent;
       'v1.cards': V1Cards;
       'v1.case-studys': V1CaseStudys;
       'v1.casestudy-content': V1CasestudyContent;

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_study_hero_components",
+  "info": {
+    "singularName": "case-study-hero-component",
+    "pluralName": "case-study-hero-components",
+    "displayName": "CaseStudyHeroComponent"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    }
+  }
+}
