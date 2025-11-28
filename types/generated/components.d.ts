@@ -126,6 +126,22 @@ export interface V1ClientReviews extends Struct.ComponentSchema {
   };
 }
 
+export interface V1ClientTestimonial extends Struct.ComponentSchema {
+  collectionName: 'components_v1_client_testimonials';
+  info: {
+    displayName: 'Client Testimonial';
+  };
+  attributes: {
+    ClientCountry: Schema.Attribute.String;
+    ClientImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    ClientName: Schema.Attribute.String;
+    TestimonialDescription: Schema.Attribute.Text;
+    TestimonialTitle: Schema.Attribute.String;
+  };
+}
+
 export interface V1Description extends Struct.ComponentSchema {
   collectionName: 'components_v1_descriptions';
   info: {
@@ -701,6 +717,7 @@ declare module '@strapi/strapi' {
       'v1.case-studys': V1CaseStudys;
       'v1.casestudy-content': V1CasestudyContent;
       'v1.client-reviews': V1ClientReviews;
+      'v1.client-testimonial': V1ClientTestimonial;
       'v1.description': V1Description;
       'v1.faqs': V1Faqs;
       'v1.heading-and-bulleted-rich-text': V1HeadingAndBulletedRichText;

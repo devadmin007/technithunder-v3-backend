@@ -510,6 +510,40 @@ export interface ApiCasestudyCasestudy extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiClientTestimonialClientTestimonial
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'client_testimonials';
+  info: {
+    displayName: 'Client Testimonial';
+    pluralName: 'client-testimonials';
+    singularName: 'client-testimonial';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ClientTestimonial: Schema.Attribute.Component<
+      'v1.client-testimonial',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::client-testimonial.client-testimonial'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCommentComment extends Struct.CollectionTypeSchema {
   collectionName: 'comments';
   info: {
@@ -1333,6 +1367,7 @@ declare module '@strapi/strapi' {
       'api::case-study-component.case-study-component': ApiCaseStudyComponentCaseStudyComponent;
       'api::case-study-hero-component.case-study-hero-component': ApiCaseStudyHeroComponentCaseStudyHeroComponent;
       'api::casestudy.casestudy': ApiCasestudyCasestudy;
+      'api::client-testimonial.client-testimonial': ApiClientTestimonialClientTestimonial;
       'api::comment.comment': ApiCommentComment;
       'api::contact-form.contact-form': ApiContactFormContactForm;
       'api::dashboard.dashboard': ApiDashboardDashboard;
