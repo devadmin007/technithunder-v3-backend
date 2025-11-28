@@ -132,6 +132,8 @@ export interface V1ClientTestimonial extends Struct.ComponentSchema {
     displayName: 'Client Testimonial';
   };
   attributes: {
+    ButtonLink: Schema.Attribute.String;
+    ButtonText: Schema.Attribute.String;
     ClientCountry: Schema.Attribute.String;
     ClientImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
