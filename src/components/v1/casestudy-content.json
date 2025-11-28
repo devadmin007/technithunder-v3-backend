@@ -69,10 +69,17 @@
         "files"
       ]
     },
-    "projectResultDescription": {
-      "type": "text"
+    "ProjectResultImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
-    "percentageInfo": {
+    "percenResultInfo": {
       "type": "component",
       "component": "v1.percentage-info-component",
       "repeatable": true
