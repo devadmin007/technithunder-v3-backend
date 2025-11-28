@@ -5,11 +5,11 @@
   },
   "options": {},
   "attributes": {
-    "percentage": {
-      "type": "integer"
-    },
-    "info": {
+    "Title": {
       "type": "string"
+    },
+    "Description": {
+      "type": "text"
     }
   },
   "config": {}

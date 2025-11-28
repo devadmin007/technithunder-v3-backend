@@ -98,13 +98,15 @@ export interface V1CasestudyContent extends Struct.ComponentSchema {
       'v1.our-approach-tag-component',
       true
     >;
-    percentageInfo: Schema.Attribute.Component<
+    percenResultInfo: Schema.Attribute.Component<
       'v1.percentage-info-component',
       true
     >;
     projectImg1: Schema.Attribute.Media<'images' | 'files'>;
     projectImg2: Schema.Attribute.Media<'images' | 'files'>;
-    projectResultDescription: Schema.Attribute.Text;
+    ProjectResultImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     solutionDescription: Schema.Attribute.Component<
       'v1.solution-description-component',
       true
@@ -331,8 +333,8 @@ export interface V1PercentageInfoComponent extends Struct.ComponentSchema {
     displayName: 'percentageInfoComponent';
   };
   attributes: {
-    info: Schema.Attribute.String;
-    percentage: Schema.Attribute.Integer;
+    Description: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
   };
 }
 
