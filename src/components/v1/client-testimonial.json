@@ -26,6 +26,12 @@
     },
     "TestimonialDescription": {
       "type": "text"
+    },
+    "ButtonText": {
+      "type": "string"
+    },
+    "ButtonLink": {
+      "type": "string"
     }
   },
   "config": {}
