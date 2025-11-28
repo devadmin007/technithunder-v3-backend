@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_v1_client_testimonials",
+  "info": {
+    "displayName": "Client Testimonial"
+  },
+  "options": {},
+  "attributes": {
+    "ClientImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ClientName": {
+      "type": "string"
+    },
+    "ClientCountry": {
+      "type": "string"
+    },
+    "TestimonialTitle": {
+      "type": "string"
+    },
+    "TestimonialDescription": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

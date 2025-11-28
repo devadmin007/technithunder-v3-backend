@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "client_testimonials",
+  "info": {
+    "singularName": "client-testimonial",
+    "pluralName": "client-testimonials",
+    "displayName": "Client Testimonial"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "ClientTestimonial": {
+      "type": "component",
+      "component": "v1.client-testimonial",
+      "repeatable": true
+    }
+  }
+}
