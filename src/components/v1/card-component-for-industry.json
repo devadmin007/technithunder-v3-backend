@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_v1_card_component_for_industries",
+  "info": {
+    "displayName": "CardComponentForIndustry"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

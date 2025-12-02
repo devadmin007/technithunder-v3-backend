@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "industry_components",
+  "info": {
+    "singularName": "industry-component",
+    "pluralName": "industry-components",
+    "displayName": "Industry Component"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "ButtonText": {
+      "type": "string"
+    },
+    "ButtonLink": {
+      "type": "string"
+    },
+    "CardComponent": {
+      "type": "component",
+      "component": "v1.card-component-for-industry",
+      "repeatable": true
+    }
+  }
+}
