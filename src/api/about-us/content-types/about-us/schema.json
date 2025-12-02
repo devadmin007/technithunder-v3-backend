@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "aboutus",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "aboutus",
+    "displayName": "About us"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeroComponentForAboutUs": {
+      "type": "component",
+      "component": "v1.hero-component-for-about-us",
+      "repeatable": false
+    },
+    "EternalTrust": {
+      "type": "component",
+      "component": "v1.eternal-trust",
+      "repeatable": false
+    },
+    "TimeLineComponent": {
+      "type": "component",
+      "component": "v1.time-line-component",
+      "repeatable": true
+    },
+    "OurValue": {
+      "type": "component",
+      "component": "v1.our-value",
+      "repeatable": false
+    }
+  }
+}

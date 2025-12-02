@@ -373,6 +373,43 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAboutUsAboutUs extends Struct.CollectionTypeSchema {
+  collectionName: 'aboutus';
+  info: {
+    displayName: 'About us';
+    pluralName: 'aboutus';
+    singularName: 'about-us';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    EternalTrust: Schema.Attribute.Component<'v1.eternal-trust', false>;
+    HeroComponentForAboutUs: Schema.Attribute.Component<
+      'v1.hero-component-for-about-us',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-us.about-us'
+    > &
+      Schema.Attribute.Private;
+    OurValue: Schema.Attribute.Component<'v1.our-value', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    TimeLineComponent: Schema.Attribute.Component<
+      'v1.time-line-component',
+      true
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
   collectionName: 'blogs';
   info: {
@@ -1429,6 +1466,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::blog.blog': ApiBlogBlog;
       'api::case-study-component.case-study-component': ApiCaseStudyComponentCaseStudyComponent;
       'api::case-study-hero-component.case-study-hero-component': ApiCaseStudyHeroComponentCaseStudyHeroComponent;

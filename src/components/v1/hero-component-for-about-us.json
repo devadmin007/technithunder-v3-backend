@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_v1_hero_component_for_about_uses",
+  "info": {
+    "displayName": "Hero Component For About us"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

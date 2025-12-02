@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_v1_time_line_components",
+  "info": {
+    "displayName": "Time Line Component"
+  },
+  "options": {},
+  "attributes": {
+    "Year": {
+      "type": "integer"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

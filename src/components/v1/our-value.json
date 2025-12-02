@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_v1_our_values",
+  "info": {
+    "displayName": "OurValue"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "ourValueCard": {
+      "type": "component",
+      "component": "v1.our-value-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
