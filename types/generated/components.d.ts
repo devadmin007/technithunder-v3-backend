@@ -177,6 +177,18 @@ export interface V1Description extends Struct.ComponentSchema {
   };
 }
 
+export interface V1EternalTrust extends Struct.ComponentSchema {
+  collectionName: 'components_v1_eternal_trusts';
+  info: {
+    displayName: 'Eternal trust';
+  };
+  attributes: {
+    Description: Schema.Attribute.Blocks;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Title: Schema.Attribute.String;
+  };
+}
+
 export interface V1Faqs extends Struct.ComponentSchema {
   collectionName: 'components_v1_faqs';
   info: {
@@ -266,6 +278,17 @@ export interface V1HeroComponent extends Struct.ComponentSchema {
     RatingNumber: Schema.Attribute.Decimal;
     RatingText: Schema.Attribute.String;
     subTitle: Schema.Attribute.String;
+  };
+}
+
+export interface V1HeroComponentForAboutUs extends Struct.ComponentSchema {
+  collectionName: 'components_v1_hero_component_for_about_uses';
+  info: {
+    displayName: 'Hero Component For About us';
+  };
+  attributes: {
+    Description: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
   };
 }
 
@@ -364,6 +387,29 @@ export interface V1OurApproachTagComponent extends Struct.ComponentSchema {
   };
   attributes: {
     tag: Schema.Attribute.String;
+  };
+}
+
+export interface V1OurValue extends Struct.ComponentSchema {
+  collectionName: 'components_v1_our_values';
+  info: {
+    displayName: 'OurValue';
+  };
+  attributes: {
+    Description: Schema.Attribute.Text;
+    ourValueCard: Schema.Attribute.Component<'v1.our-value-card', true>;
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface V1OurValueCard extends Struct.ComponentSchema {
+  collectionName: 'components_v1_our_value_cards';
+  info: {
+    displayName: 'ourValueCard';
+  };
+  attributes: {
+    Description: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
   };
 }
 
@@ -623,6 +669,18 @@ export interface V1TextTag extends Struct.ComponentSchema {
   };
 }
 
+export interface V1TimeLineComponent extends Struct.ComponentSchema {
+  collectionName: 'components_v1_time_line_components';
+  info: {
+    displayName: 'Time Line Component';
+  };
+  attributes: {
+    Description: Schema.Attribute.Text;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Year: Schema.Attribute.Integer;
+  };
+}
+
 export interface V1TitleDescriptionComponent extends Struct.ComponentSchema {
   collectionName: 'components_v1_title_description_components';
   info: {
@@ -745,6 +803,7 @@ declare module '@strapi/strapi' {
       'v1.client-reviews': V1ClientReviews;
       'v1.client-testimonial': V1ClientTestimonial;
       'v1.description': V1Description;
+      'v1.eternal-trust': V1EternalTrust;
       'v1.faqs': V1Faqs;
       'v1.heading-and-bulleted-rich-text': V1HeadingAndBulletedRichText;
       'v1.heading-description': V1HeadingDescription;
@@ -752,6 +811,7 @@ declare module '@strapi/strapi' {
       'v1.heading-description-for-we-serve': V1HeadingDescriptionForWeServe;
       'v1.heding-description-image': V1HedingDescriptionImage;
       'v1.hero-component': V1HeroComponent;
+      'v1.hero-component-for-about-us': V1HeroComponentForAboutUs;
       'v1.image': V1Image;
       'v1.industry-component': V1IndustryComponent;
       'v1.industry-related-questions': V1IndustryRelatedQuestions;
@@ -760,6 +820,8 @@ declare module '@strapi/strapi' {
       'v1.key-features-list-component': V1KeyFeaturesListComponent;
       'v1.logo': V1Logo;
       'v1.our-approach-tag-component': V1OurApproachTagComponent;
+      'v1.our-value': V1OurValue;
+      'v1.our-value-card': V1OurValueCard;
       'v1.percentage-info-component': V1PercentageInfoComponent;
       'v1.process-flow': V1ProcessFlow;
       'v1.process-flow-steps': V1ProcessFlowSteps;
@@ -781,6 +843,7 @@ declare module '@strapi/strapi' {
       'v1.technology-image': V1TechnologyImage;
       'v1.text-component': V1TextComponent;
       'v1.text-tag': V1TextTag;
+      'v1.time-line-component': V1TimeLineComponent;
       'v1.title-description-component': V1TitleDescriptionComponent;
       'v1.tools-and-technology': V1ToolsAndTechnology;
       'v1.we-develop': V1WeDevelop;

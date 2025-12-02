@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_v1_our_value_cards",
+  "info": {
+    "displayName": "ourValueCard"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
