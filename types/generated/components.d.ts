@@ -44,6 +44,18 @@ export interface V1CardComponent extends Struct.ComponentSchema {
   attributes: {};
 }
 
+export interface V1CardComponentForIndustry extends Struct.ComponentSchema {
+  collectionName: 'components_v1_card_component_for_industries';
+  info: {
+    displayName: 'CardComponentForIndustry';
+  };
+  attributes: {
+    Description: Schema.Attribute.String;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Title: Schema.Attribute.String;
+  };
+}
+
 export interface V1Cards extends Struct.ComponentSchema {
   collectionName: 'components_v1_cards';
   info: {
@@ -111,6 +123,16 @@ export interface V1CasestudyContent extends Struct.ComponentSchema {
       'v1.solution-description-component',
       true
     >;
+  };
+}
+
+export interface V1ClientLogos extends Struct.ComponentSchema {
+  collectionName: 'components_v1_client_logos';
+  info: {
+    displayName: 'ClientLogos';
+  };
+  attributes: {
+    Logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -715,9 +737,11 @@ declare module '@strapi/strapi' {
       'v1.awards-and-recognized': V1AwardsAndRecognized;
       'v1.blogs': V1Blogs;
       'v1.card-component': V1CardComponent;
+      'v1.card-component-for-industry': V1CardComponentForIndustry;
       'v1.cards': V1Cards;
       'v1.case-studys': V1CaseStudys;
       'v1.casestudy-content': V1CasestudyContent;
+      'v1.client-logos': V1ClientLogos;
       'v1.client-reviews': V1ClientReviews;
       'v1.client-testimonial': V1ClientTestimonial;
       'v1.description': V1Description;

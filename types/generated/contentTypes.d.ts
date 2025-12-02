@@ -662,6 +662,36 @@ export interface ApiDashboardDashboard extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiHappyClientsComponentHappyClientsComponent
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'happy_clients_components';
+  info: {
+    displayName: 'Happy Clients Component';
+    pluralName: 'happy-clients-components';
+    singularName: 'happy-clients-component';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ClientLogos: Schema.Attribute.Component<'v1.client-logos', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::happy-clients-component.happy-clients-component'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHireHire extends Struct.CollectionTypeSchema {
   collectionName: 'hires';
   info: {
@@ -687,6 +717,42 @@ export interface ApiHireHire extends Struct.CollectionTypeSchema {
     MainTitle: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiIndustryComponentIndustryComponent
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'industry_components';
+  info: {
+    displayName: 'Industry Component';
+    pluralName: 'industry-components';
+    singularName: 'industry-component';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ButtonLink: Schema.Attribute.String;
+    ButtonText: Schema.Attribute.String;
+    CardComponent: Schema.Attribute.Component<
+      'v1.card-component-for-industry',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Description: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::industry-component.industry-component'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1371,7 +1437,9 @@ declare module '@strapi/strapi' {
       'api::comment.comment': ApiCommentComment;
       'api::contact-form.contact-form': ApiContactFormContactForm;
       'api::dashboard.dashboard': ApiDashboardDashboard;
+      'api::happy-clients-component.happy-clients-component': ApiHappyClientsComponentHappyClientsComponent;
       'api::hire.hire': ApiHireHire;
+      'api::industry-component.industry-component': ApiIndustryComponentIndustryComponent;
       'api::industry.industry': ApiIndustryIndustry;
       'api::service.service': ApiServiceService;
       'api::team.team': ApiTeamTeam;

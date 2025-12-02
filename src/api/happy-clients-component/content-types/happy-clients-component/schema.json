@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "happy_clients_components",
+  "info": {
+    "singularName": "happy-clients-component",
+    "pluralName": "happy-clients-components",
+    "displayName": "Happy Clients Component"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "ClientLogos": {
+      "type": "component",
+      "component": "v1.client-logos",
+      "repeatable": true
+    }
+  }
+}
