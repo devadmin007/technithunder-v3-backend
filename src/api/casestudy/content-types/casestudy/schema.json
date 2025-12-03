@@ -77,6 +77,26 @@
       "component": "v1.casestudy-content",
       "repeatable": false
     },
+    "Challenges": {
+      "type": "component",
+      "component": "v1.zigzag-component",
+      "repeatable": false
+    },
+    "TitleImageComponent": {
+      "type": "component",
+      "component": "v1.title-image-component",
+      "repeatable": false
+    },
+    "KeyFeatures": {
+      "type": "component",
+      "component": "v1.zigzag-component",
+      "repeatable": false
+    },
+    "Solution": {
+      "type": "component",
+      "component": "v1.zigzag-component",
+      "repeatable": false
+    },
     "faqs": {
       "type": "component",
       "component": "v1.faqs",

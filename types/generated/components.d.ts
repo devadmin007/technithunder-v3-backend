@@ -94,14 +94,8 @@ export interface V1CasestudyContent extends Struct.ComponentSchema {
       'v1.about-title-info-logo-component',
       true
     >;
-    challangesDescription: Schema.Attribute.Text;
     heroImg: Schema.Attribute.Media<'images' | 'files'>;
     heroTitle: Schema.Attribute.Text;
-    keyFeaturesImg: Schema.Attribute.Media<'images' | 'files'>;
-    keyFeaturesList: Schema.Attribute.Component<
-      'v1.key-features-list-component',
-      true
-    >;
     letsBuildDescription: Schema.Attribute.Text;
     letsBuildImg: Schema.Attribute.Media<'images' | 'files'>;
     letsBuildTitle: Schema.Attribute.String;
@@ -114,14 +108,8 @@ export interface V1CasestudyContent extends Struct.ComponentSchema {
       'v1.percentage-info-component',
       true
     >;
-    projectImg1: Schema.Attribute.Media<'images' | 'files'>;
-    projectImg2: Schema.Attribute.Media<'images' | 'files'>;
     ProjectResultImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
-    >;
-    solutionDescription: Schema.Attribute.Component<
-      'v1.solution-description-component',
-      true
     >;
   };
 }
@@ -174,6 +162,17 @@ export interface V1Description extends Struct.ComponentSchema {
   };
   attributes: {
     Descriptions: Schema.Attribute.Text;
+  };
+}
+
+export interface V1DetailsComponent extends Struct.ComponentSchema {
+  collectionName: 'components_v1_details_components';
+  info: {
+    displayName: 'detailsComponent';
+  };
+  attributes: {
+    Description: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
   };
 }
 
@@ -406,9 +405,7 @@ export interface V1KeyFeaturesListComponent extends Struct.ComponentSchema {
   info: {
     displayName: 'keyFeaturesListComponent';
   };
-  attributes: {
-    list: Schema.Attribute.String;
-  };
+  attributes: {};
 }
 
 export interface V1Logo extends Struct.ComponentSchema {
@@ -641,9 +638,7 @@ export interface V1SolutionDescriptionComponent extends Struct.ComponentSchema {
   info: {
     displayName: 'solutionDescriptionComponent';
   };
-  attributes: {
-    description: Schema.Attribute.Text;
-  };
+  attributes: {};
 }
 
 export interface V1Tags extends Struct.ComponentSchema {
@@ -731,6 +726,17 @@ export interface V1TitleDescriptionComponent extends Struct.ComponentSchema {
   };
   attributes: {
     Description: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface V1TitleImageComponent extends Struct.ComponentSchema {
+  collectionName: 'components_v1_title_image_components';
+  info: {
+    displayName: 'TitleImageComponent';
+  };
+  attributes: {
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Title: Schema.Attribute.String;
   };
 }
@@ -833,6 +839,18 @@ export interface V1WhyChooseUsComponent extends Struct.ComponentSchema {
   };
 }
 
+export interface V1ZigzagComponent extends Struct.ComponentSchema {
+  collectionName: 'components_v1_zigzag_components';
+  info: {
+    displayName: 'zigzagComponent';
+  };
+  attributes: {
+    detailsComponent: Schema.Attribute.Component<'v1.details-component', true>;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Title: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -848,6 +866,7 @@ declare module '@strapi/strapi' {
       'v1.client-reviews': V1ClientReviews;
       'v1.client-testimonial': V1ClientTestimonial;
       'v1.description': V1Description;
+      'v1.details-component': V1DetailsComponent;
       'v1.eternal-trust': V1EternalTrust;
       'v1.faqs': V1Faqs;
       'v1.heading-and-bulleted-rich-text': V1HeadingAndBulletedRichText;
@@ -893,6 +912,7 @@ declare module '@strapi/strapi' {
       'v1.text-tag': V1TextTag;
       'v1.time-line-component': V1TimeLineComponent;
       'v1.title-description-component': V1TitleDescriptionComponent;
+      'v1.title-image-component': V1TitleImageComponent;
       'v1.tools-and-technology': V1ToolsAndTechnology;
       'v1.we-develop': V1WeDevelop;
       'v1.we-serve': V1WeServe;
@@ -900,6 +920,7 @@ declare module '@strapi/strapi' {
       'v1.what-you-need': V1WhatYouNeed;
       'v1.who-we-are-component': V1WhoWeAreComponent;
       'v1.why-choose-us-component': V1WhyChooseUsComponent;
+      'v1.zigzag-component': V1ZigzagComponent;
     }
   }
 }

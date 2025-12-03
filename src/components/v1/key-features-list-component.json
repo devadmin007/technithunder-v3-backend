@@ -4,10 +4,6 @@
     "displayName": "keyFeaturesListComponent"
   },
   "options": {},
-  "attributes": {
-    "list": {
-      "type": "string"
-    }
-  },
+  "attributes": {},
   "config": {}
 }

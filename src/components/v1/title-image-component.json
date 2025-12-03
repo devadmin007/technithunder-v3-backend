@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_v1_title_image_components",
+  "info": {
+    "displayName": "TitleImageComponent"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

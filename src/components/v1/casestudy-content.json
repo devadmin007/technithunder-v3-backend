@@ -24,17 +24,6 @@
       "component": "v1.about-title-info-logo-component",
       "repeatable": true
     },
-    "challangesDescription": {
-      "type": "text"
-    },
-    "projectImg1": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
-    },
     "ourApproachDescription": {
       "type": "text"
     },
@@ -42,32 +31,6 @@
       "type": "component",
       "component": "v1.our-approach-tag-component",
       "repeatable": true
-    },
-    "keyFeaturesImg": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
-    },
-    "keyFeaturesList": {
-      "type": "component",
-      "component": "v1.key-features-list-component",
-      "repeatable": true
-    },
-    "solutionDescription": {
-      "type": "component",
-      "component": "v1.solution-description-component",
-      "repeatable": true
-    },
-    "projectImg2": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
     },
     "ProjectResultImage": {
       "type": "media",
