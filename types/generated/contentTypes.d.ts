@@ -746,6 +746,10 @@ export interface ApiHireHire extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    HeroComponentForHire: Schema.Attribute.Component<
+      'v1.hero-component-for-hire',
+      false
+    >;
     HireFullName: Schema.Attribute.String;
     HireName: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -864,9 +868,15 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    DevelopmentServices: Schema.Attribute.Component<
+      'v1.why-choose-us-component',
+      false
+    >;
     faqs: Schema.Attribute.Component<'v1.que-ans-component', true>;
-    heroImage: Schema.Attribute.Media<'images' | 'files'>;
-    heroTitle: Schema.Attribute.String;
+    HeroComponentForServices: Schema.Attribute.Component<
+      'v1.hero-component-for-services',
+      false
+    >;
     keyBenefits: Schema.Attribute.Component<'v1.key-benefits', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -892,10 +902,6 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    whyChooseUs: Schema.Attribute.Component<
-      'v1.why-choose-us-component',
-      false
-    >;
   };
 }
 

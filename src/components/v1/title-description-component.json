@@ -5,11 +5,11 @@
   },
   "options": {},
   "attributes": {
-    "title": {
+    "Title": {
       "type": "string"
     },
-    "description": {
-      "type": "richtext"
+    "Description": {
+      "type": "text"
     }
   },
   "config": {}
