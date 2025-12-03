@@ -516,6 +516,7 @@ export interface ApiCasestudyCasestudy extends Struct.CollectionTypeSchema {
   };
   attributes: {
     casestudySection: Schema.Attribute.Component<'v1.casestudy-content', false>;
+    Challenges: Schema.Attribute.Component<'v1.zigzag-component', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -525,6 +526,7 @@ export interface ApiCasestudyCasestudy extends Struct.CollectionTypeSchema {
     Industry: Schema.Attribute.Enumeration<
       ['Ecommerce', 'Travel', 'FinTech', 'Healthcare']
     >;
+    KeyFeatures: Schema.Attribute.Component<'v1.zigzag-component', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -538,9 +540,14 @@ export interface ApiCasestudyCasestudy extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     Skill: Schema.Attribute.Component<'v1.skills', true>;
     slug: Schema.Attribute.UID;
+    Solution: Schema.Attribute.Component<'v1.zigzag-component', false>;
     TextTag: Schema.Attribute.Component<'v1.text-tag', true>;
     ThumbnailImg: Schema.Attribute.Media<'images' | 'files'>;
     title: Schema.Attribute.String;
+    TitleImageComponent: Schema.Attribute.Component<
+      'v1.title-image-component',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

@@ -4,10 +4,6 @@
     "displayName": "solutionDescriptionComponent"
   },
   "options": {},
-  "attributes": {
-    "description": {
-      "type": "text"
-    }
-  },
+  "attributes": {},
   "config": {}
 }
