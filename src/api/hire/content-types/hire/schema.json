@@ -30,6 +30,11 @@
     },
     "MainTitle": {
       "type": "string"
+    },
+    "HeroComponentForHire": {
+      "type": "component",
+      "component": "v1.hero-component-for-hire",
+      "repeatable": false
     }
   }
 }

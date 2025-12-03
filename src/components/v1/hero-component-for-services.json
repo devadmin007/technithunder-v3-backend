@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_v1_hero_component_for_services",
+  "info": {
+    "displayName": "HeroComponentForServices"
+  },
+  "options": {},
+  "attributes": {
+    "TagLine": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "ButtonText": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

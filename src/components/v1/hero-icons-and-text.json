@@ -1,11 +1,11 @@
 {
-  "collectionName": "components_v1_our_value_cards",
+  "collectionName": "components_v1_hero_icons_and_texts",
   "info": {
-    "displayName": "ourValueCard"
+    "displayName": "HeroIconsAndText"
   },
   "options": {},
   "attributes": {
-    "Icons": {
+    "Icon": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -15,11 +15,8 @@
         "audios"
       ]
     },
-    "Title": {
+    "IconText": {
       "type": "string"
-    },
-    "Description": {
-      "type": "text"
     }
   },
   "config": {}

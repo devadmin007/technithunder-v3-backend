@@ -30,18 +30,12 @@
     "slug": {
       "type": "uid"
     },
-    "heroTitle": {
-      "type": "string"
+    "HeroComponentForServices": {
+      "type": "component",
+      "component": "v1.hero-component-for-services",
+      "repeatable": false
     },
-    "heroImage": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
-    },
-    "whyChooseUs": {
+    "DevelopmentServices": {
       "type": "component",
       "component": "v1.why-choose-us-component",
       "repeatable": false

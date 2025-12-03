@@ -292,6 +292,48 @@ export interface V1HeroComponentForAboutUs extends Struct.ComponentSchema {
   };
 }
 
+export interface V1HeroComponentForHire extends Struct.ComponentSchema {
+  collectionName: 'components_v1_hero_component_for_hires';
+  info: {
+    displayName: 'HeroComponentForHire';
+  };
+  attributes: {
+    ButtonText: Schema.Attribute.String;
+    Description: Schema.Attribute.Text;
+    DiscountLine: Schema.Attribute.Text;
+    HeroIconsAndText: Schema.Attribute.Component<
+      'v1.hero-icons-and-text',
+      true
+    >;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface V1HeroComponentForServices extends Struct.ComponentSchema {
+  collectionName: 'components_v1_hero_component_for_services';
+  info: {
+    displayName: 'HeroComponentForServices';
+  };
+  attributes: {
+    ButtonText: Schema.Attribute.String;
+    Description: Schema.Attribute.Text;
+    TagLine: Schema.Attribute.String;
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface V1HeroIconsAndText extends Struct.ComponentSchema {
+  collectionName: 'components_v1_hero_icons_and_texts';
+  info: {
+    displayName: 'HeroIconsAndText';
+  };
+  attributes: {
+    Icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    IconText: Schema.Attribute.String;
+  };
+}
+
 export interface V1Image extends Struct.ComponentSchema {
   collectionName: 'components_v1_images';
   info: {
@@ -409,6 +451,7 @@ export interface V1OurValueCard extends Struct.ComponentSchema {
   };
   attributes: {
     Description: Schema.Attribute.Text;
+    Icons: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Title: Schema.Attribute.String;
   };
 }
@@ -687,8 +730,8 @@ export interface V1TitleDescriptionComponent extends Struct.ComponentSchema {
     displayName: 'titleDescriptionComponent';
   };
   attributes: {
-    description: Schema.Attribute.RichText;
-    title: Schema.Attribute.String;
+    Description: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
   };
 }
 
@@ -779,12 +822,14 @@ export interface V1WhyChooseUsComponent extends Struct.ComponentSchema {
     displayName: 'whyChooseUsComponent';
   };
   attributes: {
+    ButtonText: Schema.Attribute.String;
     headingDescription: Schema.Attribute.Component<
       'v1.title-description-component',
       true
     >;
     mainDescription: Schema.Attribute.Text;
     mainTitle: Schema.Attribute.String;
+    TagLine: Schema.Attribute.String;
   };
 }
 
@@ -812,6 +857,9 @@ declare module '@strapi/strapi' {
       'v1.heding-description-image': V1HedingDescriptionImage;
       'v1.hero-component': V1HeroComponent;
       'v1.hero-component-for-about-us': V1HeroComponentForAboutUs;
+      'v1.hero-component-for-hire': V1HeroComponentForHire;
+      'v1.hero-component-for-services': V1HeroComponentForServices;
+      'v1.hero-icons-and-text': V1HeroIconsAndText;
       'v1.image': V1Image;
       'v1.industry-component': V1IndustryComponent;
       'v1.industry-related-questions': V1IndustryRelatedQuestions;

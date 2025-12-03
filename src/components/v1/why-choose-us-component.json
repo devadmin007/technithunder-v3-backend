@@ -5,11 +5,17 @@
   },
   "options": {},
   "attributes": {
+    "TagLine": {
+      "type": "string"
+    },
     "mainTitle": {
       "type": "string"
     },
     "mainDescription": {
       "type": "text"
+    },
+    "ButtonText": {
+      "type": "string"
     },
     "headingDescription": {
       "type": "component",

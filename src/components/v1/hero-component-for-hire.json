@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_v1_hero_component_for_hires",
+  "info": {
+    "displayName": "HeroComponentForHire"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "DiscountLine": {
+      "type": "text"
+    },
+    "ButtonText": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "HeroIconsAndText": {
+      "type": "component",
+      "component": "v1.hero-icons-and-text",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
