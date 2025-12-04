@@ -823,6 +823,10 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    DevelopmentServices: Schema.Attribute.Component<
+      'v1.why-choose-us-component',
+      false
+    >;
     faqs: Schema.Attribute.Component<'v1.faqs', true>;
     headerText: Schema.Attribute.String;
     HeroDescription: Schema.Attribute.Text;
@@ -849,10 +853,10 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     SegmentsWeServe: Schema.Attribute.Component<'v1.segments-we-serve', false>;
     slug: Schema.Attribute.UID;
+    TopFeaturesSection: Schema.Attribute.Component<'v1.top-features', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    WeDevelop: Schema.Attribute.Component<'v1.we-develop', false>;
     WhatYouNeed: Schema.Attribute.Component<'v1.what-you-need', false>;
   };
 }

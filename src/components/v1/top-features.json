@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_v1_top_features",
+  "info": {
+    "displayName": "TopFeatures"
+  },
+  "options": {},
+  "attributes": {
+    "MainTitle": {
+      "type": "string"
+    },
+    "MainDescription": {
+      "type": "string"
+    },
+    "TabSection": {
+      "type": "component",
+      "component": "v1.feature-tab-section",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
