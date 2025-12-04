@@ -199,6 +199,18 @@ export interface V1Faqs extends Struct.ComponentSchema {
   };
 }
 
+export interface V1FeatureTabSection extends Struct.ComponentSchema {
+  collectionName: 'components_v1_feature_tab_sections';
+  info: {
+    displayName: 'FeatureTabSection';
+  };
+  attributes: {
+    TabData: Schema.Attribute.Component<'v1.title-description-component', true>;
+    TabImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    TabTitle: Schema.Attribute.String;
+  };
+}
+
 export interface V1HeadingAndBulletedRichText extends Struct.ComponentSchema {
   collectionName: 'components_v1_heading_and_bulleted_rich_texts';
   info: {
@@ -752,6 +764,18 @@ export interface V1ToolsAndTechnology extends Struct.ComponentSchema {
   };
 }
 
+export interface V1TopFeatures extends Struct.ComponentSchema {
+  collectionName: 'components_v1_top_features';
+  info: {
+    displayName: 'TopFeatures';
+  };
+  attributes: {
+    MainDescription: Schema.Attribute.String;
+    MainTitle: Schema.Attribute.String;
+    TabSection: Schema.Attribute.Component<'v1.feature-tab-section', true>;
+  };
+}
+
 export interface V1WeDevelop extends Struct.ComponentSchema {
   collectionName: 'components_v1_we_develops';
   info: {
@@ -869,6 +893,7 @@ declare module '@strapi/strapi' {
       'v1.details-component': V1DetailsComponent;
       'v1.eternal-trust': V1EternalTrust;
       'v1.faqs': V1Faqs;
+      'v1.feature-tab-section': V1FeatureTabSection;
       'v1.heading-and-bulleted-rich-text': V1HeadingAndBulletedRichText;
       'v1.heading-description': V1HeadingDescription;
       'v1.heading-description-for-it-services': V1HeadingDescriptionForItServices;
@@ -914,6 +939,7 @@ declare module '@strapi/strapi' {
       'v1.title-description-component': V1TitleDescriptionComponent;
       'v1.title-image-component': V1TitleImageComponent;
       'v1.tools-and-technology': V1ToolsAndTechnology;
+      'v1.top-features': V1TopFeatures;
       'v1.we-develop': V1WeDevelop;
       'v1.we-serve': V1WeServe;
       'v1.what-client-says': V1WhatClientSays;
