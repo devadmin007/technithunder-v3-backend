@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_v1_feature_tab_sections",
+  "info": {
+    "displayName": "FeatureTabSection"
+  },
+  "options": {},
+  "attributes": {
+    "TabTitle": {
+      "type": "string"
+    },
+    "TabImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "TabData": {
+      "type": "component",
+      "component": "v1.title-description-component",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

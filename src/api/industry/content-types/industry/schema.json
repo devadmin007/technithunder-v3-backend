@@ -58,9 +58,14 @@
     "ButtonText": {
       "type": "string"
     },
-    "WeDevelop": {
+    "DevelopmentServices": {
       "type": "component",
-      "component": "v1.we-develop",
+      "component": "v1.why-choose-us-component",
+      "repeatable": false
+    },
+    "TopFeaturesSection": {
+      "type": "component",
+      "component": "v1.top-features",
       "repeatable": false
     },
     "SegmentsWeServe": {
