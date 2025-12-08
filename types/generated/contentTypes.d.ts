@@ -873,7 +873,15 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
   };
   attributes: {
     category: Schema.Attribute.Enumeration<
-      ['Ecommerce', 'Software', 'Application', 'Digital', 'Business Solutions']
+      [
+        'Ecommerce',
+        'Software',
+        'Application',
+        'Digital',
+        'Business Solutions',
+        'Artificial Intelligence',
+        'Generative AI',
+      ]
     >;
     CategoryFullName: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
