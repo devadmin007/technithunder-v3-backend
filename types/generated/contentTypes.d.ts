@@ -827,7 +827,7 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
       'v1.why-choose-us-component',
       false
     >;
-    faqs: Schema.Attribute.Component<'v1.faqs', true>;
+    FaqComponent: Schema.Attribute.Component<'v1.faqs-with-points', true>;
     headerText: Schema.Attribute.String;
     HeroDescription: Schema.Attribute.Text;
     HeroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
@@ -880,7 +880,6 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
         'Digital',
         'Business Solutions',
         'Artificial Intelligence',
-        'Generative AI',
       ]
     >;
     CategoryFullName: Schema.Attribute.String;
@@ -891,7 +890,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
       'v1.why-choose-us-component',
       false
     >;
-    faqs: Schema.Attribute.Component<'v1.que-ans-component', true>;
+    faqs: Schema.Attribute.Component<'v1.faqs-with-points', true>;
     HeroComponentForServices: Schema.Attribute.Component<
       'v1.hero-component-for-services',
       false

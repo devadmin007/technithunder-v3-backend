@@ -19,8 +19,7 @@
         "Application",
         "Digital",
         "Business Solutions",
-        "Artificial Intelligence",
-        "Generative AI"
+        "Artificial Intelligence"
       ]
     },
     "CategoryFullName": {
@@ -64,7 +63,7 @@
     },
     "faqs": {
       "type": "component",
-      "component": "v1.que-ans-component",
+      "component": "v1.faqs-with-points",
       "repeatable": true
     }
   }
