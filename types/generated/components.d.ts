@@ -199,6 +199,17 @@ export interface V1Faqs extends Struct.ComponentSchema {
   };
 }
 
+export interface V1FaqsWithPoints extends Struct.ComponentSchema {
+  collectionName: 'components_v1_faqs_with_points';
+  info: {
+    displayName: 'FaqsWithPoints';
+  };
+  attributes: {
+    answer: Schema.Attribute.Blocks;
+    question: Schema.Attribute.String;
+  };
+}
+
 export interface V1FeatureTabSection extends Struct.ComponentSchema {
   collectionName: 'components_v1_feature_tab_sections';
   info: {
@@ -893,6 +904,7 @@ declare module '@strapi/strapi' {
       'v1.details-component': V1DetailsComponent;
       'v1.eternal-trust': V1EternalTrust;
       'v1.faqs': V1Faqs;
+      'v1.faqs-with-points': V1FaqsWithPoints;
       'v1.feature-tab-section': V1FeatureTabSection;
       'v1.heading-and-bulleted-rich-text': V1HeadingAndBulletedRichText;
       'v1.heading-description': V1HeadingDescription;
