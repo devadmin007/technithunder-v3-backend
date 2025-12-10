@@ -32,6 +32,14 @@
     },
     "ButtonLink": {
       "type": "string"
+    },
+    "TestimonialVideo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
     }
   },
   "config": {}

@@ -94,7 +94,7 @@ export interface V1CasestudyContent extends Struct.ComponentSchema {
       'v1.about-title-info-logo-component',
       true
     >;
-    heroImg: Schema.Attribute.Media<'images' | 'files'>;
+    heroImg: Schema.Attribute.Media<'images' | 'videos'>;
     heroTitle: Schema.Attribute.Text;
     letsBuildDescription: Schema.Attribute.Text;
     letsBuildImg: Schema.Attribute.Media<'images' | 'files'>;
@@ -151,6 +151,7 @@ export interface V1ClientTestimonial extends Struct.ComponentSchema {
     ClientName: Schema.Attribute.String;
     TestimonialDescription: Schema.Attribute.Text;
     TestimonialTitle: Schema.Attribute.String;
+    TestimonialVideo: Schema.Attribute.Media<'images' | 'videos'>;
   };
 }
 
