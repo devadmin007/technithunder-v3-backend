@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_v1_tables",
+  "info": {
+    "displayName": "Table"
+  },
+  "options": {},
+  "attributes": {
+    "TableTitle": {
+      "type": "string"
+    },
+    "Columns": {
+      "type": "json"
+    },
+    "Rows": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}

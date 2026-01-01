@@ -422,13 +422,16 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
   };
   attributes: {
     authorName: Schema.Attribute.String;
-    blogDetail: Schema.Attribute.DynamicZone<['v1.image', 'v1.rich-text']>;
+    blogDetail: Schema.Attribute.DynamicZone<
+      ['v1.image', 'v1.rich-text', 'v1.table']
+    >;
     blogSubTitle: Schema.Attribute.String;
     blogTitle: Schema.Attribute.String;
     comments: Schema.Attribute.Relation<'oneToMany', 'api::comment.comment'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    faqs: Schema.Attribute.Component<'v1.faqs-with-points', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'> &
       Schema.Attribute.Private;
