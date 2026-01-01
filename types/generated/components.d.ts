@@ -665,6 +665,18 @@ export interface V1SolutionDescriptionComponent extends Struct.ComponentSchema {
   attributes: {};
 }
 
+export interface V1Table extends Struct.ComponentSchema {
+  collectionName: 'components_v1_tables';
+  info: {
+    displayName: 'Table';
+  };
+  attributes: {
+    Columns: Schema.Attribute.JSON;
+    Rows: Schema.Attribute.JSON;
+    TableTitle: Schema.Attribute.String;
+  };
+}
+
 export interface V1Tags extends Struct.ComponentSchema {
   collectionName: 'components_v1_tags';
   info: {
@@ -942,6 +954,7 @@ declare module '@strapi/strapi' {
       'v1.single-case-study': V1SingleCaseStudy;
       'v1.skills': V1Skills;
       'v1.solution-description-component': V1SolutionDescriptionComponent;
+      'v1.table': V1Table;
       'v1.tags': V1Tags;
       'v1.technology': V1Technology;
       'v1.technology-group': V1TechnologyGroup;
