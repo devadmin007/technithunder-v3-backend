@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_v1_faqs_with_points",
+  "info": {
+    "displayName": "FaqsWithPoints"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

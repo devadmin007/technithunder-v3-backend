@@ -13,7 +13,7 @@
       "multiple": false,
       "allowedTypes": [
         "images",
-        "files"
+        "videos"
       ]
     },
     "aboutDescription": {

@@ -94,7 +94,7 @@ export interface V1CasestudyContent extends Struct.ComponentSchema {
       'v1.about-title-info-logo-component',
       true
     >;
-    heroImg: Schema.Attribute.Media<'images' | 'files'>;
+    heroImg: Schema.Attribute.Media<'images' | 'videos'>;
     heroTitle: Schema.Attribute.Text;
     letsBuildDescription: Schema.Attribute.Text;
     letsBuildImg: Schema.Attribute.Media<'images' | 'files'>;
@@ -151,6 +151,7 @@ export interface V1ClientTestimonial extends Struct.ComponentSchema {
     ClientName: Schema.Attribute.String;
     TestimonialDescription: Schema.Attribute.Text;
     TestimonialTitle: Schema.Attribute.String;
+    TestimonialVideo: Schema.Attribute.Media<'images' | 'videos'>;
   };
 }
 
@@ -195,6 +196,17 @@ export interface V1Faqs extends Struct.ComponentSchema {
   };
   attributes: {
     answer: Schema.Attribute.Text;
+    question: Schema.Attribute.String;
+  };
+}
+
+export interface V1FaqsWithPoints extends Struct.ComponentSchema {
+  collectionName: 'components_v1_faqs_with_points';
+  info: {
+    displayName: 'FaqsWithPoints';
+  };
+  attributes: {
+    answer: Schema.Attribute.Blocks;
     question: Schema.Attribute.String;
   };
 }
@@ -653,6 +665,18 @@ export interface V1SolutionDescriptionComponent extends Struct.ComponentSchema {
   attributes: {};
 }
 
+export interface V1Table extends Struct.ComponentSchema {
+  collectionName: 'components_v1_tables';
+  info: {
+    displayName: 'Table';
+  };
+  attributes: {
+    Columns: Schema.Attribute.JSON;
+    Rows: Schema.Attribute.JSON;
+    TableTitle: Schema.Attribute.String;
+  };
+}
+
 export interface V1Tags extends Struct.ComponentSchema {
   collectionName: 'components_v1_tags';
   info: {
@@ -893,6 +917,7 @@ declare module '@strapi/strapi' {
       'v1.details-component': V1DetailsComponent;
       'v1.eternal-trust': V1EternalTrust;
       'v1.faqs': V1Faqs;
+      'v1.faqs-with-points': V1FaqsWithPoints;
       'v1.feature-tab-section': V1FeatureTabSection;
       'v1.heading-and-bulleted-rich-text': V1HeadingAndBulletedRichText;
       'v1.heading-description': V1HeadingDescription;
@@ -929,6 +954,7 @@ declare module '@strapi/strapi' {
       'v1.single-case-study': V1SingleCaseStudy;
       'v1.skills': V1Skills;
       'v1.solution-description-component': V1SolutionDescriptionComponent;
+      'v1.table': V1Table;
       'v1.tags': V1Tags;
       'v1.technology': V1Technology;
       'v1.technology-group': V1TechnologyGroup;

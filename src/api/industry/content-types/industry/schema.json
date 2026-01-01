@@ -88,9 +88,9 @@
       "component": "v1.industry-related-questions",
       "repeatable": false
     },
-    "faqs": {
+    "FaqComponent": {
       "type": "component",
-      "component": "v1.faqs",
+      "component": "v1.faqs-with-points",
       "repeatable": true
     }
   }

@@ -18,7 +18,8 @@
         "Software",
         "Application",
         "Digital",
-        "Business Solutions"
+        "Business Solutions",
+        "Artificial Intelligence"
       ]
     },
     "CategoryFullName": {
@@ -62,7 +63,7 @@
     },
     "faqs": {
       "type": "component",
-      "component": "v1.que-ans-component",
+      "component": "v1.faqs-with-points",
       "repeatable": true
     }
   }
