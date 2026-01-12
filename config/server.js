@@ -15,7 +15,7 @@
 module.exports = ({ env }) => ({
   host: env('HOST', '0.0.0.0'),
   port: env.int('PORT', 1337),
-  url: env('PUBLIC_URL'), // Add this for Railway
+  url: env('PUBLIC_URL') || env('URL'), // Add this for Railway/Strapi Cloud
   app: {
     keys: env.array('APP_KEYS'),
   },
